@@ -19,4 +19,26 @@ function SelectDanhMuc(){
     return query($sql);
 }
 
+function SelectDanhMucPage($sortName = null, $sortBy = null, $offset = 0, $limit = 0){
+    $sql = "SELECT * FROM danhmuc ";
+    if($sortName != null and $sortBy != null){
+        $sql .= " ORDER BY {$sortName} {$sortBy}";
+    }
+    if($offset >=0 and $limit >=0){
+        $sql .= " LIMIT {$limit} OFFSET {$offset}";
+    }
+    $list = query($sql);
+    return $list;
+}
+
+function countDanhMuc(){
+    $sql = "SELECT * FROM danhmuc";
+    return sizeof(getCount($sql));
+}
+
+function FindDanhMuc($id){
+    $sql = "SELECT * FROM danhmuc WHERE id_danhmuc = {$id}";
+    return query($sql);
+}
+
 ?>

@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="/duan1_nhom13/Template/Admin/assets/style.css">
     <link rel="stylesheet" href="/duan1_nhom13/Template/Admin/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/duan1_nhom13/Template/Admin/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/duan1_nhom13/Template/Admin/assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <!-- <link rel="stylesheet" href="/duan1_nhom13/Template/Admin/assets/fontawesome-icon/css/fontawesome.min.css" /> -->
     <link rel="stylesheet" href="/duan1_nhom13/Template/Admin/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
     <script src="/duan1_nhom13/Template/Admin/assets/js/ace-extra.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -17,7 +18,6 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/duan1_nhom13/Template/Paging/jquery.twbsPagination.js"></script>
-    
     <script src="/duan1_nhom13/ckeditor/ckeditor.js"></script>
 </head>
 <body class="no-skin">

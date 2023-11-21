@@ -36,7 +36,7 @@
         </form>
         <div class="row">
             <div class="col">
-            <a class="danhsachdanhmuc" href="/duan1_nhom13/Controller/Admin/index.php?action=danhsachtheloai">Xem danh sách thể loại phim</a>           
+            <a class="danhsachdanhmuc" href="/duan1_nhom13/Controller/Admin/index.php?action=danhsachtheloai&page=1&maxPageItem=2&sortName=id_theloai&sortBy=asc">Xem danh sách thể loại phim</a>           
             </div>
         
         </div>

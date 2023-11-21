@@ -14,9 +14,14 @@ function InsertGhe($maghe,$dayghe){
 //     execute($sql);
 // }
 
-// function SelectDonHang(){
-//     $sql = "SELECT * FROM donhang";
-//     return query($sql);
-// }
+function SelectGheByDayGhe($id){
+    $sql = "SELECT * FROM ghe WHERE id_dayghe = {$id}";
+    return query($sql);
+}
+
+function DeleteGheByDayGhe($maghe,$id){
+    $sql = "DELETE FROM ghe WHERE id_dayghe = {$id} AND maghe like '{$maghe}'";
+    execute($sql);    
+}
 
 ?>

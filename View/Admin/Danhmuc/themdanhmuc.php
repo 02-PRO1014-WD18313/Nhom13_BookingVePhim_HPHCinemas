@@ -1,14 +1,6 @@
 <div class="main-content">
     <div class="main-content-inner">
-        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
-            <ul class="breadcrumb">
-                <li>
-                    <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=danhmuc">Trang danh muc</a>
-                </li>
-            </ul><!-- /.breadcrumb -->
-        </div>
-        
+
         <h1 style="margin-left:50px; ">Thêm Danh Mục:</h1>
         <form action="/duan1_nhom13/Controller/Admin/Danhmuc/add.php" method="post">
             <div class="row">
@@ -36,7 +28,7 @@
         </form>
         <div class="row">
             <div class="col">
-            <a class="danhsachdanhmuc" href="/duan1_nhom13/Controller/Admin/index.php?action=danhsachdanhmuc">Xem danh sách danh mục</a>           
+            <a class="danhsachdanhmuc" href="/duan1_nhom13/Controller/Admin/index.php?action=danhsachdanhmuc&page=1&maxPageItem=2&sortName=id_danhmuc&sortBy=asc">Xem danh sách danh mục</a>           
             </div>
         
         </div>

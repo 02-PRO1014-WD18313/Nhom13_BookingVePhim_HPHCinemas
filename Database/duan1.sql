@@ -112,3 +112,16 @@ ADD FOREIGN KEY (trangthai) REFERENCES trangthaiphong(id_trangthaiphong);
 
 ALTER TABLE ghe
 ADD FOREIGN KEY (trangthaighe) REFERENCES trangthaighe(id_trangthaighe);
+
+
+alter table phim add daodien varchar(100);
+
+alter table phim add dienvien varchar(100);
+
+alter table phim add ngayketthuc date;
+
+alter table dayghe add id_lichchieu int;
+
+ALTER TABLE dayghe
+ADD FOREIGN KEY (id_lichchieu) REFERENCES lichchieu(id_lichchieu);
+
