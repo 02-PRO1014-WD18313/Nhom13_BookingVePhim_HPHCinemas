@@ -1,6 +1,6 @@
 <?php
 function InsertPhong($maphong, $trangthai){
-    $sql = "INSERT INTO phong(maphong, soluongda, trangthai) VALUES ('{$maphong}',10,{$trangthai})";
+    $sql = "INSERT INTO phong(maphong, soluongday, trangthai) VALUES ('{$maphong}',5,{$trangthai})";
     $id = inserted_id($sql);
     return $id;
 }
@@ -11,7 +11,7 @@ function DeletePhong($id){
 }
 
 function UpdatePhong($id,$maphong, $trangthai){
-    $sql = "UPDATE phong SET maphong = '{$maphong}', soluongday = 10, , trangthai = $trangthai  WHERE id_phong = {$id}";
+    $sql = "UPDATE phong SET maphong = '{$maphong}', soluongday = 5, , trangthai = $trangthai  WHERE id_phong = {$id}";
     execute($sql);
 }
 

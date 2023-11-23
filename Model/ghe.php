@@ -19,8 +19,8 @@ function SelectGheByDayGhe($id){
     return query($sql);
 }
 
-function DeleteGheByDayGhe($maghe,$id){
-    $sql = "DELETE FROM ghe WHERE id_dayghe = {$id} AND maghe like '{$maghe}'";
+function DeleteGheByDayGhe($id){
+    $sql = "DELETE FROM ghe WHERE id_dayghe = {$id} ";
     execute($sql);    
 }
 

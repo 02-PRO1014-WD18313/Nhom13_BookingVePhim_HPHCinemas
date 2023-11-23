@@ -76,7 +76,7 @@
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=quanlytaikhoan&page=1&maxPageItem=5&sortName=id_nguoidung&sortBy=desc">
                         
                         Quản lý tài khoản
                     </a>

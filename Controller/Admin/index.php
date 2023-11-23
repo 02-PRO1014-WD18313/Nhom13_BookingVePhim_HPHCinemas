@@ -36,7 +36,7 @@ if (isset($_GET['action'])) {
 
             break;
         case 'suatheloai':
-            
+
             include $path . "Controller/Admin/Theloai/FindTheLoai.php";
             include $path . "View/Admin/Theloai/chinhsuatheloai.php";
             break;
@@ -81,6 +81,16 @@ if (isset($_GET['action'])) {
             include $path . "Controller/Admin/Sanpham/listpage.php";
             include $path . "View/Admin/Suatchieu/danhsachsuatchieu.php";
 
+            break;
+        case 'chitietsuatchieu':
+            include $path . "Controller/Admin/Suatchieu/ListSuatChieu.php";
+            include $path . "View/Admin/Suatchieu/chitietsuatchieu.php";
+
+            break;
+        case 'quanlytaikhoan':
+            
+            include $path . "Controller/Admin/Taikhoan/ListNguoiDung.php";
+            include $path . "View/Admin/Taikhoan/quanly.php";
             break;
         default:
             include $path . "View/Admin/Home.php";

@@ -39,4 +39,9 @@ function DeleteChiTietTheLoaiByTheLoaiAndPhim($idTheLoai,$idPhim){
     execute($sql);
 }
 
+function FindPhimByTheLoai($id){
+    $sql = "SELECT id_phim FROM theloaiphimchitiet WHERE id_theloai = {$id}";
+    return query($sql);
+}
+
 ?>

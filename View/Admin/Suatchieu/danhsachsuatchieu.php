@@ -2,7 +2,7 @@
     <div class="main-content-inner">
         
 
-        <h1 style="margin-left:50px; ">Danh sách phim:</h1>
+        <h1 style="margin-left:50px; ">Danh sách suất chiếu:</h1>
         <form action="/duan1_nhom13/Controller/Admin/index.php?" id="formSubmit" method="get">
             <table class="table table-bordered">
                 <thead>
@@ -12,7 +12,7 @@
                         <th style="width: 10%;">Ảnh</th>
                         <th>Tên phim</th>
                         <th>Suất chiếu</th>
-                        <th>Thao tác</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -35,14 +35,14 @@
                             
                             ?>
                             <div>
-                                <a href="" class="btn btn-primary" ><?php echo $lichChieu[$i]['thoigianchieu'] ?></a>
+                                <a href="/duan1_nhom13/Controller/Admin/index.php?action=chitietsuatchieu&id=<?php echo $lichChieu[$i]['id_lichchieu'] ?>" class="btn btn-primary" ><?php echo $lichChieu[$i]['thoigianchieu'] ?></a>
                             </div>
                                 
 
                             <?php
                                 }
                             ?></td>
-                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/duan1_nhom13/Controller/Admin/Sanpham/delete.php?id_phim=<?php echo $phim['id_phim'] ?>" class="btn btn-danger">Xóa</a> </td>
+                            
                             
                         </tr>
                     <?php
@@ -62,7 +62,7 @@
                         <input type="hidden" value="" id="maxPageItem" name="maxPageItem" />
                         <input type="hidden" value="" id="sortName" name="sortName" />
                         <input type="hidden" value="" id="sortBy" name="sortBy" />
-                        <input type="hidden" value="danhsachphim" id="action" name="action" />
+                        <input type="hidden" value="danhsachsuatchieu" id="action" name="action" />
                     </div>
 
                 </div>

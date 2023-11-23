@@ -25,4 +25,9 @@ function SelectDayGheByPhong($id){
     return query($sql);
 }
 
+function SelectDayGheBySuatChieu($id){
+    $sql = "SELECT * FROM dayghe WHERE id_lichchieu = {$id}";
+    return query($sql);
+}
+
 ?>

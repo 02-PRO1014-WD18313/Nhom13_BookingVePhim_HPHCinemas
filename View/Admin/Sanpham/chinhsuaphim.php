@@ -74,7 +74,7 @@
                                 <label for="ngayketthuc" class="form-label">
                                     <h3>Ngày kết thúc:</h3>
                                 </label>
-                                <input type="date" class="form-control" id="ngayketthuc" value="<?php echo $phim[0]['ngayketthuc'] ?>" name="ngayphathanh" required>
+                                <input type="date" class="form-control" id="ngayketthuc" value="<?php echo $phim[0]['ngayketthuc'] ?>" name="ngayketthuc" required>
                             </div>
                             <span style="color: red;" id="error_date"></span>
                         </div>

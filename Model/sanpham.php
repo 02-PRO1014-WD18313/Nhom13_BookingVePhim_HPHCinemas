@@ -42,4 +42,9 @@ function FindPhim($id){
     return query($sql);
 }
 
+function FindPhimByDanhMuc($id){
+    $sql = "SELECT * FROM phim  WHERE id_danhmuc = {$id}";
+    return query($sql);
+}
+
 ?>
