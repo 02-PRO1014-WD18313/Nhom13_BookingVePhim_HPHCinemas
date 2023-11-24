@@ -42,4 +42,26 @@ function CountNguoiDung(){
     return sizeof(query($sql));
 }
 
+function CheckUsernameAndPassword($tenDangNhap,$matKhau){
+    $sql_nguoidung = "SELECT * FROM nguoidung AS n INNER JOIN vaitro AS r ON n.id_vaitro = r.id_vaitro WHERE n.tendangnhap = '{$tenDangNhap}' and n.matkhau = '{$matKhau}'";
+    $list = query($sql_nguoidung);
+    return $list == null ? null : $list[0];
+}
+
+function updatePassWord($id_nguoidung,$matkhau){
+    $sql = "UPDATE nguoidung SET  matkhau = '{$matkhau}'  WHERE id_nguoidung = {$id_nguoidung}";
+    execute($sql);
+}
+
+function UpdateInformationUser($id_nguoidung,$hovaten, $email){
+    $sql = "UPDATE nguoidung SET  hovaten = '{$hovaten}', email = '{$email}'  WHERE id_nguoidung = {$id_nguoidung}";
+    execute($sql);
+}
+
+function FindUser($id){
+    $sql = "SELECT * FROM nguoidung WHERE id_nguoidung = {$id}";
+    $list = query($sql);
+    return $list == null ? null : $list[0];
+}
+
 ?>

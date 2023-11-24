@@ -1,4 +1,8 @@
 <?php
+session_start();
+ob_start();
+
+if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "ADMIN") {
 $path = $_SERVER['DOCUMENT_ROOT'] . '/duan1_nhom13/';
 include $path . "Model/pdo.php";
 include $path . "Common/Admin/header.php";
@@ -100,4 +104,8 @@ if (isset($_GET['action'])) {
 }
 
 include $path . "Common/Admin/footer.php";
+}else{
+    header("location:../User/index.php");
+}
+ob_end_flush();
 ?>

@@ -57,7 +57,7 @@
                 <li>
                     <a href="/duan1_nhom13/Controller/Admin/index.php?action=sanpham">
                         
-                        Sản phẩm
+                        Phim
                     </a>
                     <b class="arrow"></b>
                 </li>

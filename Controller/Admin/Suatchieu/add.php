@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         for ($i = 0; $i < $length; $i++) {
             $day = chr($char);
-            $soluong = $_POST[$day];
+            $soluong = 6;
             $idDay = InsertDayGhe($day, $soluong, $idphong,$id);
             for ($j = 1; $j <= $soluong; $j++) {
                 InsertGhe($day . $j, $idDay);

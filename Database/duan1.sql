@@ -81,7 +81,6 @@ ALTER TABLE dayghe ADD FOREIGN KEY (id_phong) REFERENCES phong (id_phong);
 CREATE TABLE ghe(
 	id_ghe int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     maghe varchar(10),
-    trangthaighe int,
     id_dayghe int
 );
 
@@ -102,16 +101,11 @@ create table trangthaiphong(
     tentrangthaiphong varchar(255)
 );
 
-create table trangthaighe(
-	id_trangthaighe int AUTO_INCREMENT primary key not null,
-    tentrangthaighe varchar(255)
-);
+
 
 ALTER TABLE phong
 ADD FOREIGN KEY (trangthai) REFERENCES trangthaiphong(id_trangthaiphong);
 
-ALTER TABLE ghe
-ADD FOREIGN KEY (trangthaighe) REFERENCES trangthaighe(id_trangthaighe);
 
 
 alter table phim add daodien varchar(100);
@@ -125,3 +119,19 @@ alter table dayghe add id_lichchieu int;
 ALTER TABLE dayghe
 ADD FOREIGN KEY (id_lichchieu) REFERENCES lichchieu(id_lichchieu);
 
+alter table ghe add  trangthaighe ENUM('available', 'reserved', 'booked') DEFAULT 'available';
+
+
+create table binhluan(
+	id_danhgia int not null primary key auto_increment,
+    id_nguoidung int,
+    id_phim int,
+    noidung text,
+    ngayviet timestamp
+);
+
+ALTER TABLE binhluan
+ADD FOREIGN KEY (id_nguoidung) REFERENCES nguoidung(id_nguoidung);
+
+ALTER TABLE binhluan
+ADD FOREIGN KEY (id_phim) REFERENCES phim(id_phim);

@@ -91,12 +91,86 @@
 
             ?>
                 <div class="col-1">
-                    <a href="/duan1_nhom13/Controller/User/index.php?action=datve&id_lichchieu=<?php echo $time['id_lichchieu'] ?>" class="time"><?php echo date("H:i", strtotime($time['thoigianchieu'])); ?></a>
+                    <form id="myForm" action="/duan1_nhom13/Controller/User/index.php?" method="GET">
+                        <input type="hidden" name="id_lichchieu" value="<?php echo $time['id_lichchieu'] ?>">
+                        <input type="hidden" name="action" value="datve">
+                        <input type="hidden" name="id_lichchieu" value="<?php echo $time['id_lichchieu'] ?>">
+                        <button type="submit" class="time"><?php echo date("H:i", strtotime($time['thoigianchieu'])); ?></button>
+                    </form>
+
                 </div>
             <?php
             }
             ?>
         </div>
+
+        <div style="margin-top: 100px;">
+				<h1>Đánh giá của khách hàng</h1>
+				<section>
+					<div class="container my-5 py-5">
+						<div class="row d-flex justify-content-center">
+							<div class="col-md-12 col-lg-10">
+								<div class="card text-dark">
+									<?php
+										foreach($listBinhLuan AS $binhLuan){
+									?>
+									<div class="card-body p-4">
+
+
+										<div class="d-flex flex-start">
+
+											<div>
+												<h6 class="fw-bold mb-1"><?php echo $binhLuan['hovaten'] ?></h6>
+												<div class="d-flex align-items-center mb-3">
+													<p class="mb-0">
+													<?php echo $binhLuan['ngayviet'] ?>
+
+													</p>
+												</div>
+												<p class="mb-0">
+												<?php echo $binhLuan['noidung'] ?>
+												</p>
+												<?php 
+													if(isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['id_nguoidung'] == $binhLuan['id_nguoidung']){
+												?>
+                                                    <a href="/duan1_nhom13/Controller/Admin/Binhluan/DeleteByUser.php?id_binhluan=<?php echo $binhLuan['id_danhgia']?>&id_phim=<?php echo $_GET['id_phim'] ?>">Xóa</a>
+												<?php
+													}
+												?>
+											</div>
+										</div>
+									</div>
+
+									<hr class="my-0" />
+									<?php
+										}
+									?>
+
+
+
+								<?php 
+									if(isset($_SESSION['nguoidung'])){
+								?>
+								<h3 style="margin-top: 50px;"><?php echo $_SESSION['nguoidung']['hovaten'] ?></h3>
+									<form class="comment" action="/duan1_nhom13/Controller/Admin/Binhluan/add.php" >
+										<div class="mb-3 mt-3">
+											<label for="noidung">Bình luận:</label>
+											<textarea class="form-control" rows="3" id="noidung" name="noidung"></textarea>
+										</div>
+										<span id="check"></span>
+										<input type="hidden" value="<?php echo $_GET['id_phim'] ?>" name="id_phim">
+										<input type="hidden" value="<?php echo $_SESSION['nguoidung']['id_nguoidung'] ?>" name="id_nguoidung">
+										<button  type="submit" class="btn btn-primary">Gửi<i class="fas fa-long-arrow-alt-right ms-1"></i></button>
+									</form>
+								</div>
+								<?php
+									}
+								?>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 
     </div>
 </section>
@@ -131,3 +205,26 @@
         padding: 5px 20px;
     }
 </style>
+<!-- <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Lấy dữ liệu từ biểu mẫu
+        var formData = new FormData(event.target);
+
+        // Chuyển đổi FormData thành chuỗi query parameters
+        var queryString = new URLSearchParams(formData).toString();
+
+        // Gửi dữ liệu đến API sử dụng fetch
+        fetch('http://localhost/duan1_nhom13/Controller/Api/GheApi.php?' + queryString)
+            .then(response => response.json())
+            .then(data => {
+                // Xử lý dữ liệu trả về từ API nếu cần
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    document.getElementById('myForm').submit();
+    });
+</script> -->

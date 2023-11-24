@@ -35,14 +35,14 @@
             <ul class="nav ace-nav">
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        <?php if(isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['code'] == "ADMIN"){ ?>
+                        <?php if(isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "ADMIN"){ ?>
                         Xin chào, <?php echo $_SESSION['nguoidung']['hovaten'] ?>
                         <?php
                         }
                         ?>
                     </a>
                     <li class="light-blue dropdown-modal">
-                        <a href='/duanmau/controller/web/index.php?action=logout'>
+                        <a href='/duan1_nhom13/Controller/User/index.php?action=dangxuat'>
                             <i class="ace-icon fa fa-power-off"></i>
                             Thoát
                         </a>

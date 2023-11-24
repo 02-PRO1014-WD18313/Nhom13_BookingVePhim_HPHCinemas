@@ -1,6 +1,6 @@
 <?php
 function InsertGhe($maghe,$dayghe){
-    $sql = "INSERT INTO ghe(maghe, trangthaighe, id_dayghe) VALUES ('{$maghe}',1,{$dayghe})";
+    $sql = "INSERT INTO ghe(maghe, id_dayghe) VALUES ('{$maghe}',{$dayghe})";
     execute($sql);
 }
 

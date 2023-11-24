@@ -52,21 +52,7 @@
 
 
 
-                        <div>
-                            <h3>Trạng thái phòng:</h3>
-                            <select name="trangthaiphong" id="">
-
-                                <?php
-                                foreach ($listTrangThai as $trangThai) {
-
-                                ?>
-                                    <option value="<?php echo $trangThai['id_trangthaiphong'] ?>"><?php echo $trangThai['tentrangthaiphong'] ?></option>
-                                <?php
-                                }
-                                ?>
-
-                            </select>
-                        </div>
+                        
                     </div>
 
 

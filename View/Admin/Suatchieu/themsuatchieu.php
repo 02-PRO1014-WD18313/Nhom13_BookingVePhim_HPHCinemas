@@ -83,31 +83,7 @@
                     
 
                     <div class="col-sm-12">
-                    <?php
-                    $char = 65;
-                    $length = 5;
-                    $seat = 5;
-                    for ($i = 0; $i < $length; $i++) {
-
-                    ?>
-
-                        <div class="col-sm-1" style="">
-                            <h3>Dãy <?php echo chr($char) ?></h3>
-                            <select name="<?php echo chr($char) ?>" id="">
-                                <?php
-                                for ($j = 1; $j <= $seat; $j++) {
-                                ?>
-                                    <option value="<?php echo $j ?>"><?php echo $j ?> ghế</option>
-                                <?php
-                                }
-                                ?>
-                            </select>
-
-                        </div>
-                    <?php
-                        $char++;
-                    }
-                    ?>
+                    
                         <button type="submit" class="form-control btn btn-primary" style="margin-top: 30px;">
                             Thêm
                         </button>

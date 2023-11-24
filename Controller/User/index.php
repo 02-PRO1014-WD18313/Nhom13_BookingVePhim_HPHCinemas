@@ -1,4 +1,6 @@
 <?php
+session_start();
+ob_start();
 $path = $_SERVER['DOCUMENT_ROOT'] . '/duan1_nhom13/';
 include $path . "Model/pdo.php";
 include $path . "Controller/Admin/Theloai/list.php";
@@ -21,15 +23,40 @@ if (isset($_GET['action'])) {
             include $path . "Controller/Admin/Sanpham/FindPhim.php";
             include $path . "Controller/User/Suatchieu/CheckDate.php";
             include $path . "Controller/User/Suatchieu/FindTime.php";
+            include $path . "Controller/Admin/Binhluan/list.php";
             include $path . "View/User/Chitietphim.php";
             break;
         case 'datve':
-            include $path . "Controller/User/Datve/FindPhong.php";
-            include $path . "View/User/Datve.php";
+            if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "USER") {
+                include $path . "Controller/User/Datve/FindPhong.php";
+                include $path . "View/User/Datve.php";
+            } else {
+                include $path . "View/User/Dangnhap.php";
+            }
+            break;
+        case 'thaydoimatkhau':
+            if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "USER") {
+                include $path . "View/User/ThayDoiMatKhau.php";
+            } else {
+                include $path . "View/User/Dangnhap.php";
+            }
+            break;
+        case 'thaydoithongtin':
+            if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "USER") {
+                include $path . "Controller/Admin/Taikhoan/Findone.php";
+                include $path . "View/User/ThayDoiThongTin.php";
+            } else {
+                include $path . "View/User/Dangnhap.php";
+            }
             break;
         case 'dangky':
             include $path . "View/User/Dangky.php";
             break;
+        case 'dangnhap':
+            include $path . "View/User/Dangnhap.php";
+            break;
+        case 'dangxuat':
+            include $path . "Controller/logout.php";
         case 'phantrang':
             include $path . "Controller/Admin/Sanpham/listpage.php";
             include $path . "View/User/Home.php";
@@ -55,4 +82,5 @@ if (isset($_GET['action'])) {
 }
 
 include $path . "Common/User/footer.php";
+ob_end_flush();
 ?>

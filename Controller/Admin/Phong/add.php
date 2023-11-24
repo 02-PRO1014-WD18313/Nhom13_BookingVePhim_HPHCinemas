@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         return;
     }
 
-    $id = InsertPhong($maphong,$trangthaiphong);
+    $id = InsertPhong($maphong,1);
 
     // $char = 65;
      
