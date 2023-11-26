@@ -33,7 +33,7 @@
                             <td><?php echo $nguoiDung['tendangnhap'] ?></td>
                             <td><?php echo $nguoiDung['matkhau'] ?></td>
                             <td><?php echo $nguoiDung['tenvaitro'] ?></td>
-                            <td><a href=""  onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" class="btn btn-danger">Xóa</a></td>
+                            <td><a href="/duan1_nhom13/Controller/Admin/Taikhoan/delete.php?id_nguoidung=<?php echo $nguoiDung['id_nguoidung'] ?>"  onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" class="btn btn-danger">Xóa</a></td>
                            
                             
                             

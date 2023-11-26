@@ -59,7 +59,7 @@ function UpdateInformationUser($id_nguoidung,$hovaten, $email){
 }
 
 function FindUser($id){
-    $sql = "SELECT * FROM nguoidung WHERE id_nguoidung = {$id}";
+    $sql = "SELECT * FROM nguoidung AS n INNER JOIN vaitro AS r ON n.id_vaitro = r.id_vaitro WHERE n.id_nguoidung = {$id}";
     $list = query($sql);
     return $list == null ? null : $list[0];
 }

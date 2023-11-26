@@ -90,7 +90,7 @@ CREATE TABLE donhang(
 	id_donhang int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     id_nguoidung int,
     id_lichchieu int,
-    soghedadat int
+    soghedadat varchar(255)
 );
 
 ALTER TABLE donhang ADD FOREIGN KEY (id_nguoidung) REFERENCES nguoidung (id_nguoidung);
@@ -135,3 +135,7 @@ ADD FOREIGN KEY (id_nguoidung) REFERENCES nguoidung(id_nguoidung);
 
 ALTER TABLE binhluan
 ADD FOREIGN KEY (id_phim) REFERENCES phim(id_phim);
+
+alter table donhang add madonhang int;
+alter table donhang add thoigiandat timestamp;
+alter table donhang add gia double;

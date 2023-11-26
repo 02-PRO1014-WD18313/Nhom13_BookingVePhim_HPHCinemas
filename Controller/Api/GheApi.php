@@ -24,21 +24,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 }
 
 // Đặt ghế
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $data = json_decode(file_get_contents("php://input"), true);
-
-    $seatNumber = $data['seatNumber'];
-    $customerName = $data['customerName'];
-
-    $sql = "UPDATE seats SET status = 'reserved' WHERE seat_number = '$seatNumber' AND status = 'available'";
-    $conn->query($sql);
-
-    $seatId = $conn->insert_id;
-
-    $sql = "INSERT INTO bookings (seat_id, customer_name) VALUES ('$seatId', '$customerName')";
-    $conn->query($sql);
-
-    echo json_encode(['message' => 'Seat booked successfully']);
-}
 
 ?>

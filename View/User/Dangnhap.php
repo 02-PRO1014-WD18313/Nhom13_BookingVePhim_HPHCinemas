@@ -40,6 +40,12 @@
                             <input type="submit" name="submit" class="btn btn-success btn-md" value="Đăng nhập">
                         </div>
 
+                        <div class="row">
+                            <div class="col d-flex justify-content-between">
+                                <a href="/duan1_nhom13/Controller/User/index.php?action=dangky">Đăng ký</a>
+                                <a href="/duan1_nhom13/Controller/User/index.php?action=laylaimatkhau">Quên mật khẩu</a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

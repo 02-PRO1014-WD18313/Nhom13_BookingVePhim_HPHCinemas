@@ -9,10 +9,10 @@ function InsertGhe($maghe,$dayghe){
 //     execute($sql);
 // }
 
-// function UpdateDonHang($id,$id_nguoidung, $id_lichchieu,$soghedadat){
-//     $sql = "UPDATE donhang SET id_nguoidung = {$id_nguoidung}, id_lichchieu = {$id_lichchieu}, soghedadat = {$soghedadat}  WHERE id_donhang = {$id}";
-//     execute($sql);
-// }
+function UpdateGhe($id,$status){
+    $sql = "UPDATE ghe SET trangthaighe = '{$status}' WHERE id_ghe = {$id}";
+    execute($sql);
+}
 
 function SelectGheByDayGhe($id){
     $sql = "SELECT * FROM ghe WHERE id_dayghe = {$id}";

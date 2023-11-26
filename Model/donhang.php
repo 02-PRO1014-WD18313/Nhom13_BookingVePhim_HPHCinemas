@@ -1,6 +1,6 @@
 <?php
-function InsertDonHang($id_nguoidung, $id_lichchieu,$soghedadat){
-    $sql = "INSERT INTO donhang(id_nguoidung, id_lichchieu, soghedadat) VALUES ({$id_nguoidung},{$id_lichchieu},{$soghedadat})";
+function InsertDonHang($madonhang,$gia,$soghedadat,$thoigiandat,$id_nguoidung, $id_lichchieu){
+    $sql = "INSERT INTO donhang(madonhang,gia,soghedadat,thoigiandat,id_nguoidung, id_lichchieu) VALUES ({$madonhang},{$gia},'{$soghedadat}','{$thoigiandat}',{$id_nguoidung},{$id_lichchieu})";
     execute($sql);
 }
 

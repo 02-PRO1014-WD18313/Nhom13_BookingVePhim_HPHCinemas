@@ -21,6 +21,6 @@ if($NguoiDung != null){
         header("Location:../../User/index.php");
     }
 }else{
-    header("Location:../../web/index.php?action=login&&check=danger");
+    header("Location:../../User/index.php?action=dangnhap&&check=danger");
 }
 ?>

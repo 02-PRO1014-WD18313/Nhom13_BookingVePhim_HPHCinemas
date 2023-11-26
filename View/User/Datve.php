@@ -84,12 +84,23 @@
         <div class="col-8 "></div>
         <div class="col-4 d-flex  align-items-center">
             <p class="total" style="margin-right: 10px;">Tổng tiền: </p>
-            <p class="price">0</p> <span>VNĐ</span>
+            <p class="price" style="color: red;">0</p> <span style="color: red;">VNĐ</span>
         </div>
     </div>
 
-    <div class="row">
-        <h2>Chọn phương thức thanh toán:</h2>
+    <div class="row" style="margin-bottom: 50px;">
+        <div class="col-8 "></div>
+        <div class="col-4 d-flex  align-items-center">
+            <form id="myForm" action="http://localhost/duan1_nhom13/Controller/Api/config.php" method="post">
+                <input type="hidden" id="id_nguodung" name="id_nguodung">
+                <input type="hidden" id="id_lichchieu" name="id_lichchieu">
+                <input type="hidden" id="idGhes" name="idGhes">
+                <input type="hidden" id="maGhes" name="maGhes">
+                <input type="hidden" id="gia" name="gia">
+                <button id="payment-button" name="redirect">Thanh toán</button>
+            </form>
+
+        </div>
     </div>
 
 </div>
@@ -114,7 +125,7 @@
 
     .available {
         background-color: #ccc;
-        
+
     }
 
     .reserved {
@@ -126,6 +137,21 @@
         background-color: red;
         color: white;
     }
+
+    #myForm {
+        width: 100%;
+    }
+
+    #payment-button {
+        border: none;
+        border-radius: 20px;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+        background-image: linear-gradient(to right, #0a64a7 0%, #258dcf 51%, #3db1f3 100%) !important;
+    }
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -135,8 +161,9 @@
         const seatContainer = document.getElementById('seat-container');
         var price = document.querySelector('.price');
         var currentValue = parseInt(price.textContent);
-        var priceMovie = parseInt(<?php  echo $information[0]['giave']?>);
+        var priceMovie = parseInt(<?php echo $information[0]['giave'] ?>);
         price.innerText = 0
+
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
@@ -168,29 +195,7 @@
             displaySeats(actionParam);
         }
 
-        function bookSeat(seatNumber) {
 
-            if (customerName) {
-                fetch('api.php', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            idGhes: idSeats,
-                            soGhe: arr.idSeats,
-                            idLichChieu: actionParam,
-                            idNguoiDung: <?php echo $_SESSION['nguoidung']['id_nguoidung'] ?>,
-                        }),
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        alert(data.message);
-
-                        location.reload();
-                    });
-            }
-        }
 
         function toggleSeat(seatElement, seatNumber, seatStatus, idSeat) {
             if (seatStatus === 'booked') {
@@ -222,5 +227,36 @@
             }
 
         }
+
+        const paymentButton = document.getElementById('payment-button');
+
+        // function submitForm() {
+        //     // Lấy giá trị của biến id từ JavaScript
+        //     var idValue = 2;
+
+        //     // Cập nhật giá trị của trường ẩn
+        //     document.getElementById('id').value = idValue;
+
+        //     // Submit form
+        //     document.getElementById('myForm').submit();
+        // }
+
+        paymentButton.addEventListener('click', function() {
+            if (selectedSeats.length > 0) {
+                var idNguoiDung = <?php echo $_SESSION['nguoidung']['id_nguoidung'] ?>;
+                document.getElementById('id_nguodung').value = idNguoiDung;
+                document.getElementById('id_lichchieu').value = actionParam;
+                document.getElementById('idGhes').value = idSeats;
+                document.getElementById('maGhes').value = selectedSeats;
+                document.getElementById('gia').value = parseInt(price.innerText);
+                document.getElementById('myForm').submit();
+
+            } else {
+                
+                alert('Vui lòng chọn ít nhất một ghế để thanh toán.');
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+        });
     });
 </script>

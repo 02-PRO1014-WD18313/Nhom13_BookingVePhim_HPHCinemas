@@ -49,6 +49,13 @@ if (isset($_GET['action'])) {
                 include $path . "View/User/Dangnhap.php";
             }
             break;
+        case 'datvethanhcong':
+            if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "USER") {
+                include $path . "View/User/DatVeThanhCong.php";
+            } else {
+                include $path . "View/User/Dangnhap.php";
+            }
+            break;
         case 'dangky':
             include $path . "View/User/Dangky.php";
             break;
@@ -57,6 +64,12 @@ if (isset($_GET['action'])) {
             break;
         case 'dangxuat':
             include $path . "Controller/logout.php";
+        case 'laylaimatkhau':
+            include $path . "View/User/laylaimatkhau.php";
+            break;
+        case 'NhapMatKhauMoi':
+            include $path . "View/User/NhapLaiMatKhau.php";
+            break;
         case 'phantrang':
             include $path . "Controller/Admin/Sanpham/listpage.php";
             include $path . "View/User/Home.php";
