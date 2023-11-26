@@ -2,13 +2,13 @@
     <div class="container">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/duan1_nhom13/Controller/User/index.php?">Home</a></li>
+                <li class="breadcrumb-item"><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Trang chi tiết</li>
             </ol>
         </nav>
         <h2 style="margin-left:50px; ">Chi tiết phim:</h2>
         <div class="row  " style="margin: 50px 0;">
-            <div class="col-md-4"><img src="/duan1_nhom13/Template/Admin/assets/img/<?php echo $phim[0]['anh'] ?>" alt="..." style="width: 100%; border-radius: 30px;" /></div>
+            <div class="col-md-4"><img src="/Nhom13_BookingVePhim_HPHCinemas/Template/Admin/assets/img/<?php echo $phim[0]['anh'] ?>" alt="..." style="width: 100%; border-radius: 30px;" /></div>
             <div class="col-md-8">
                 <h1 class=""><?php echo $phim[0]['tenphim'] ?></h1>
 
@@ -76,7 +76,7 @@
 
                 <div class="col-2 date-<?php echo $stt ?>">
 
-                    <a href="/duan1_nhom13/Controller/User/index.php?action=chitietphim&id_phim=<?php echo $_GET['id_phim'] ?>&time=<?php echo $suatChieu ?>">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=chitietphim&id_phim=<?php echo $_GET['id_phim'] ?>&time=<?php echo $suatChieu ?>">
                         <h5><?php echo $suatChieu ?></h5>
                     </a>
                 </div>
@@ -91,7 +91,7 @@
 
             ?>
                 <div class="col-1">
-                    <form id="myForm" action="/duan1_nhom13/Controller/User/index.php?" method="GET">
+                    <form id="myForm" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?" method="GET">
                         <input type="hidden" name="id_lichchieu" value="<?php echo $time['id_lichchieu'] ?>">
                         <input type="hidden" name="action" value="datve">
                         <input type="hidden" name="id_lichchieu" value="<?php echo $time['id_lichchieu'] ?>">
@@ -133,7 +133,7 @@
 												<?php 
 													if(isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['id_nguoidung'] == $binhLuan['id_nguoidung']){
 												?>
-                                                    <a href="/duan1_nhom13/Controller/Admin/Binhluan/DeleteByUser.php?id_binhluan=<?php echo $binhLuan['id_danhgia']?>&id_phim=<?php echo $_GET['id_phim'] ?>">Xóa</a>
+                                                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Binhluan/DeleteByUser.php?id_binhluan=<?php echo $binhLuan['id_danhgia']?>&id_phim=<?php echo $_GET['id_phim'] ?>">Xóa</a>
 												<?php
 													}
 												?>
@@ -152,7 +152,7 @@
 									if(isset($_SESSION['nguoidung'])){
 								?>
 								<h3 style="margin-top: 50px;"><?php echo $_SESSION['nguoidung']['hovaten'] ?></h3>
-									<form class="comment" action="/duan1_nhom13/Controller/Admin/Binhluan/add.php" >
+									<form class="comment" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Binhluan/add.php" >
 										<div class="mb-3 mt-3">
 											<label for="noidung">Bình luận:</label>
 											<textarea class="form-control" rows="3" id="noidung" name="noidung"></textarea>
@@ -216,7 +216,7 @@
         var queryString = new URLSearchParams(formData).toString();
 
         // Gửi dữ liệu đến API sử dụng fetch
-        fetch('http://localhost/duan1_nhom13/Controller/Api/GheApi.php?' + queryString)
+        fetch('http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/Api/GheApi.php?' + queryString)
             .then(response => response.json())
             .then(data => {
                 // Xử lý dữ liệu trả về từ API nếu cần

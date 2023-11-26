@@ -1,6 +1,6 @@
 <?php
 // include "../../../model/DAO/pdo.php";
-    $absolute_path = $_SERVER['DOCUMENT_ROOT'] . "/duan1_nhom13/";
+    $absolute_path = $_SERVER['DOCUMENT_ROOT'] . "/Nhom13_BookingVePhim_HPHCinemas/";
     include $absolute_path . "Model/pdo.php";
     include $absolute_path . "Model/binhluan.php";
 

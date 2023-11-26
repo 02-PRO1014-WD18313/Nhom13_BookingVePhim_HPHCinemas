@@ -3,7 +3,7 @@
         
 
         <h1 style="margin-left:50px; ">Danh sách suất chiếu:</h1>
-        <form action="/duan1_nhom13/Controller/Admin/index.php?" id="formSubmit" method="get">
+        <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?" id="formSubmit" method="get">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -25,7 +25,7 @@
                         <tr>
                          
                             <td><?php echo $stt ?></td>
-                            <td><img src="/duan1_nhom13/Template/Admin/assets/img/<?php echo $phim['anh'] ?>" alt="" width="100%"></td>
+                            <td><img src="/Nhom13_BookingVePhim_HPHCinemas/Template/Admin/assets/img/<?php echo $phim['anh'] ?>" alt="" width="100%"></td>
                             <td><?php echo $phim['tenphim'] ?></td>
                             <td>
                             <?php
@@ -35,7 +35,7 @@
                             
                             ?>
                             <div>
-                                <a href="/duan1_nhom13/Controller/Admin/index.php?action=chitietsuatchieu&id=<?php echo $lichChieu[$i]['id_lichchieu'] ?>" class="btn btn-primary" ><?php echo $lichChieu[$i]['thoigianchieu'] ?></a>
+                                <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chitietsuatchieu&id=<?php echo $lichChieu[$i]['id_lichchieu'] ?>" class="btn btn-primary" ><?php echo $lichChieu[$i]['thoigianchieu'] ?></a>
                             </div>
                                 
 
@@ -54,7 +54,7 @@
             <div class="container-fluid">
                 <div class="row">
                    <div class="col">
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=suatchieu" class="btn btn-primary">Quay lại</a>
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=suatchieu" class="btn btn-primary">Quay lại</a>
                    </div>
                     <div class="col">
                         <ul class="pagination" id="pagination"></ul>

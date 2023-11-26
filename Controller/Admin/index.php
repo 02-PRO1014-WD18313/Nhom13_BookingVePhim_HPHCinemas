@@ -3,7 +3,7 @@ session_start();
 ob_start();
 
 if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "ADMIN") {
-$path = $_SERVER['DOCUMENT_ROOT'] . '/duan1_nhom13/';
+$path = $_SERVER['DOCUMENT_ROOT'] . '/Nhom13_BookingVePhim_HPHCinemas/';
 include $path . "Model/pdo.php";
 include $path . "Common/Admin/header.php";
 include $path . "Common/Admin/sidebar.php";

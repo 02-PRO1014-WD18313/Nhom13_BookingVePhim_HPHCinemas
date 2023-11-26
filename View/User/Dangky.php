@@ -1,7 +1,7 @@
 <div id="check"></div>
 <div id="error"></div>
 <div>
-    <form id="myForm" action="/duan1_nhom13/Controller/Admin/Taikhoan/add.php" method="post">
+    <form id="myForm" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Taikhoan/add.php" method="post">
         <div class="container ">
             <div class="row   ">
                 <div class="col ">

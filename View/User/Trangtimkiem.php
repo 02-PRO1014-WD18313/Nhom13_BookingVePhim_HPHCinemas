@@ -8,10 +8,10 @@
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="/duan1_nhom13/Template/User/img/banner-1.jpg" class="d-block w-100" alt="...">
+                        <img src="/Nhom13_BookingVePhim_HPHCinemas/Template/User/img/banner-1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="/duan1_nhom13/Template/User/img/banner-2.jpg" class="d-block w-100" alt="...">
+                        <img src="/Nhom13_BookingVePhim_HPHCinemas/Template/User/img/banner-2.jpg" class="d-block w-100" alt="...">
                     </div>
 
                 </div>
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="row">
-            <form action="/duan1_nhom13/Controller/User/index.php?" method="get">
+            <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?" method="get">
                 <div class="dropdown">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         Bộ lọc
@@ -79,7 +79,7 @@
                     <div class="col-4 mb-5" style="margin-top: 15px;">
                         <div class="card h-100" style="width: 80%;">
                             <!-- Product image-->
-                            <img class="card-img-top" src="/duan1_nhom13/Template/Admin/assets/img/<?php echo $listPhim[0]['anh'] ?>" alt="..." />
+                            <img class="card-img-top" src="/Nhom13_BookingVePhim_HPHCinemas/Template/Admin/assets/img/<?php echo $listPhim[0]['anh'] ?>" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="">

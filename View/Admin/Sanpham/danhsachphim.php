@@ -3,7 +3,7 @@
         
 
         <h1 style="margin-left:50px; ">Danh sách phim:</h1>
-        <form action="/duan1_nhom13/Controller/Admin/index.php?" id="formSubmit" method="get">
+        <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?" id="formSubmit" method="get">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -25,12 +25,12 @@
                         <tr>
                          
                             <td><?php echo $stt ?></td>
-                            <td><img src="/duan1_nhom13/Template/Admin/assets/img/<?php echo $phim['anh'] ?>" alt="" width="100%"></td>
+                            <td><img src="/Nhom13_BookingVePhim_HPHCinemas/Template/Admin/assets/img/<?php echo $phim['anh'] ?>" alt="" width="100%"></td>
                             <td><?php echo $phim['tenphim'] ?></td>
                             <td><?php echo $phim['thoiluongphim'] ?> phút</td>
-                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/duan1_nhom13/Controller/Admin/Sanpham/delete.php?id_phim=<?php echo $phim['id_phim'] ?>" class="btn btn-danger">Xóa</a> | 
-                            <a  href="/duan1_nhom13/Controller/Admin/index.php?action=chinhsuaphim&id_phim=<?php echo $phim['id_phim'] ?>" class="btn btn-warning">Sửa</a> | 
-                            <a href="/duan1_nhom13/Controller/Admin/index.php?action=chitietphim&id_phim=<?php echo $phim['id_phim'] ?>" class="btn btn-primary">Chi tiết</a></td> 
+                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Sanpham/delete.php?id_phim=<?php echo $phim['id_phim'] ?>" class="btn btn-danger">Xóa</a> | 
+                            <a  href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chinhsuaphim&id_phim=<?php echo $phim['id_phim'] ?>" class="btn btn-warning">Sửa</a> | 
+                            <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chitietphim&id_phim=<?php echo $phim['id_phim'] ?>" class="btn btn-primary">Chi tiết</a></td> 
                             
                         </tr>
                     <?php
@@ -42,7 +42,7 @@
             <div class="container-fluid">
                 <div class="row">
                    <div class="col">
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=sanpham" class="btn btn-primary">Quay lại</a>
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=sanpham" class="btn btn-primary">Quay lại</a>
                    </div>
                     <div class="col">
                         <ul class="pagination" id="pagination"></ul>

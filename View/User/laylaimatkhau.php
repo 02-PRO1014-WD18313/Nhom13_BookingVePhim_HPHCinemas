@@ -15,7 +15,7 @@
                     }
                     ?>
                     
-                    <form id="login-form" class="form" action="/duan1_nhom13/Controller/Admin/Taikhoan/LayLaiMatKhau.php" method="post">
+                    <form id="login-form" class="form" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Taikhoan/LayLaiMatKhau.php" method="post">
                         <h1 class="text-center ">Lấy lại mật khẩu</h1>
                         <div class="form-group">
                             <label for="email" class="">email</label><br>

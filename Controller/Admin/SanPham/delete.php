@@ -1,5 +1,5 @@
 <?php
-$path = $_SERVER['DOCUMENT_ROOT'].'/duan1_nhom13/';
+$path = $_SERVER['DOCUMENT_ROOT'].'/Nhom13_BookingVePhim_HPHCinemas/';
 include $path."Model/pdo.php";
 include $path."Model/sanpham.php";
 include $path."Model/theloaiphimchitiet.php";

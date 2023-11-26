@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     date_default_timezone_set('Asia/Ho_Chi_Minh');
 
     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    $vnp_Returnurl = "http://localhost/duan1_nhom13/Controller/Admin/Donhang/add.php?" . $url;
+    $vnp_Returnurl = "http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Donhang/add.php?" . $url;
     $vnp_TmnCode = "RZ7WXVGL"; //Mã website tại VNPAY 
     $vnp_HashSecret = "BUJPDEPQTTGRPUDRKWKSZSHKNBXQNDBS"; //Chuỗi bí mật
 

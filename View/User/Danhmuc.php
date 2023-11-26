@@ -8,10 +8,10 @@
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="/duan1_nhom13/Template/User/img/banner-1.jpg" class="d-block w-100" alt="...">
+                        <img src="/Nhom13_BookingVePhim_HPHCinemas/Template/User/img/banner-1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="/duan1_nhom13/Template/User/img/banner-2.jpg" class="d-block w-100" alt="...">
+                        <img src="/Nhom13_BookingVePhim_HPHCinemas/Template/User/img/banner-2.jpg" class="d-block w-100" alt="...">
                     </div>
 
                 </div>
@@ -44,14 +44,14 @@
                     if ($_GET['id_danhmuc'] == $danhMuc['id_danhmuc']) {
                     ?>
 
-                        <a class="danhmuc" href="/duan1_nhom13/Controller/User/index.php?action=danhmuc&id_danhmuc=<?php echo $danhMuc['id_danhmuc'] ?>" style="">
+                        <a class="danhmuc" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=danhmuc&id_danhmuc=<?php echo $danhMuc['id_danhmuc'] ?>" style="">
                             <h3><?php echo $danhMuc['tendanhmuc'] ?></h3>
                         </a>
 
                     <?php
                     } else  {
                     ?>
-                        <a class="danhmuckhongchon" href="/duan1_nhom13/Controller/User/index.php?action=danhmuc&id_danhmuc=<?php echo $danhMuc['id_danhmuc'] ?>" style="">
+                        <a class="danhmuckhongchon" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=danhmuc&id_danhmuc=<?php echo $danhMuc['id_danhmuc'] ?>" style="">
                             <h4><?php echo $danhMuc['tendanhmuc'] ?></h4>
                         </a>
                     <?php
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="row">
-            <form action="/duan1_nhom13/Controller/User/index.php?" method="get">
+            <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?" method="get">
                 <div class="dropdown">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         Bộ lọc
@@ -89,7 +89,7 @@
 
         </div>
         
-        <form action="/duan1_nhom13/Controller/User/index.php?" method="get">
+        <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?" method="get">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3  justify-content-center">
 
 
@@ -99,7 +99,7 @@
                     <div class="col-4 mb-5" style="margin-top: 15px;">
                         <div class="card h-100" style="width: 80%;">
                             <!-- Product image-->
-                            <img class="card-img-top" src="/duan1_nhom13/Template/Admin/assets/img/<?php echo $phim['anh'] ?>" alt="..." />
+                            <img class="card-img-top" src="/Nhom13_BookingVePhim_HPHCinemas/Template/Admin/assets/img/<?php echo $phim['anh'] ?>" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="">
@@ -134,7 +134,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class=" form-control btn btn-outline-dark mt-auto" href="/duan1_nhom13/Controller/User/index.php?action=chitietphim&id_phim=<?php echo $phim['id_phim'] ?> ">Mua vé</a></div>
+                                <div class="text-center"><a class=" form-control btn btn-outline-dark mt-auto" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=chitietphim&id_phim=<?php echo $phim['id_phim'] ?> ">Mua vé</a></div>
                             </div>
                         </div>
                     </div>

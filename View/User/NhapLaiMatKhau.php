@@ -5,7 +5,7 @@
             <div id="login-column" class="col-md-6">
                 <div id="login-box" class="col-md-12">
 
-                    <form id="myForm" class="form" action="/duan1_nhom13/Controller/Admin/Taikhoan/UpdatePassWordNew.php" method="post">
+                    <form id="myForm" class="form" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Taikhoan/UpdatePassWordNew.php" method="post">
                         <h1 class="text-center ">Nhập mật khẩu mới</h1>
                         <div class="form-group " style="margin-bottom: 20px;">
                             <label for="matkhaumoi">Mật khẩu mới</label>

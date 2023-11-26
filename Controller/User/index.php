@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-$path = $_SERVER['DOCUMENT_ROOT'] . '/duan1_nhom13/';
+$path = $_SERVER['DOCUMENT_ROOT'] . '/Nhom13_BookingVePhim_HPHCinemas/';
 include $path . "Model/pdo.php";
 include $path . "Controller/Admin/Theloai/list.php";
 include $path . "Controller/Admin/Danhmuc/list.php";

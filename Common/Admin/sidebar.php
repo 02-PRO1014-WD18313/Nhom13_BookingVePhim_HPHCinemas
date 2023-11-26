@@ -41,42 +41,42 @@
             <b class="arrow"></b>
             <ul class="submenu">
                 <li>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=danhmuc">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=danhmuc">
                         
                         Danh mục sản phẩm
                     </a>
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=theloai">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=theloai">
                         
                         Thể loại
                     </a>
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=sanpham">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=sanpham">
                         
                         Phim
                     </a>
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=phong">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=phong">
                         
                         Phòng
                     </a>
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=suatchieu">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=suatchieu">
                         
                         Suất chiếu
                     </a>
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=quanlytaikhoan&page=1&maxPageItem=5&sortName=id_nguoidung&sortBy=desc">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=quanlytaikhoan&page=1&maxPageItem=5&sortName=id_nguoidung&sortBy=desc">
                         
                         Quản lý tài khoản
                     </a>

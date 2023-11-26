@@ -1,8 +1,8 @@
 <div class="container">
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/duan1_nhom13/Controller/User/index.php?">Home</a></li>
-            <li class="breadcrumb-item"><a href="/duan1_nhom13/Controller/User/index.php?action=chitietphim&id_phim=<?php echo $information[0]['id_phim'] ?>"><?php echo $information[0]['tenphim'] ?></a></li>
+            <li class="breadcrumb-item"><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?">Home</a></li>
+            <li class="breadcrumb-item"><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=chitietphim&id_phim=<?php echo $information[0]['id_phim'] ?>"><?php echo $information[0]['tenphim'] ?></a></li>
             <li class="breadcrumb-item active" aria-current="page">Trang chi tiết</li>
         </ol>
     </nav>
@@ -25,7 +25,7 @@
             <div class="row gx-5  d-flex" style="border-bottom: 2px dashed #ccc;">
                 <div class="col-6">
 
-                    <img src="/duan1_nhom13/Template/Admin/assets/img/<?php echo $information[0]['anh'] ?>" alt="" style="width: 100%; border-radius: 10px;">
+                    <img src="/Nhom13_BookingVePhim_HPHCinemas/Template/Admin/assets/img/<?php echo $information[0]['anh'] ?>" alt="" style="width: 100%; border-radius: 10px;">
                 </div>
                 <div class="col-6">
                     <h3><?php echo $information[0]['tenphim'] ?></h3>
@@ -91,7 +91,7 @@
     <div class="row" style="margin-bottom: 50px;">
         <div class="col-8 "></div>
         <div class="col-4 d-flex  align-items-center">
-            <form id="myForm" action="http://localhost/duan1_nhom13/Controller/Api/config.php" method="post">
+            <form id="myForm" action="http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/Api/config.php" method="post">
                 <input type="hidden" id="id_nguodung" name="id_nguodung">
                 <input type="hidden" id="id_lichchieu" name="id_lichchieu">
                 <input type="hidden" id="idGhes" name="idGhes">
@@ -170,7 +170,7 @@
         }
 
         function displaySeats(id_lichchieu) {
-            fetch('http://localhost/duan1_nhom13/Controller/Api/GheApi.php?id_lichchieu=' + id_lichchieu)
+            fetch('http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/Api/GheApi.php?id_lichchieu=' + id_lichchieu)
                 .then(response => response.json())
                 .then(seats => {
                     seats.forEach(seat => {

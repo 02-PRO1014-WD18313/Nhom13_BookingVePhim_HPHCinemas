@@ -25,7 +25,7 @@
                     }
                     ?>
                     
-                    <form id="login-form" class="form" action="/duan1_nhom13/Controller/Admin/Taikhoan/Check.php" method="post">
+                    <form id="login-form" class="form" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Taikhoan/Check.php" method="post">
                         <h1 class="text-center ">Đăng nhập</h1>
                         <div class="form-group">
                             <label for="tendangnhap" class="">Tên đăng nhập:</label><br>
@@ -42,8 +42,8 @@
 
                         <div class="row">
                             <div class="col d-flex justify-content-between">
-                                <a href="/duan1_nhom13/Controller/User/index.php?action=dangky">Đăng ký</a>
-                                <a href="/duan1_nhom13/Controller/User/index.php?action=laylaimatkhau">Quên mật khẩu</a>
+                                <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=dangky">Đăng ký</a>
+                                <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=laylaimatkhau">Quên mật khẩu</a>
                             </div>
                         </div>
                     </form>

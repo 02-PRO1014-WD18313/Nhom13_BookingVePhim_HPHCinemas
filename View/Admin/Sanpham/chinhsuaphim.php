@@ -14,7 +14,7 @@
             <?php
             }
             ?>
-            <form action="/duan1_nhom13/Controller/Admin/SanPham/update.php" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+            <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/SanPham/update.php" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
 
 
                 <div class="row" style="margin-bottom: 50px;">
@@ -147,7 +147,7 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                    <a class=" chuyentrang" href="/duan1_nhom13/Controller/Admin/index.php?action=danhsachphim&page=1&maxPageItem=5&sortName=id_phim&sortBy=desc">Quay lại</a>
+                    <a class=" chuyentrang" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=danhsachphim&page=1&maxPageItem=5&sortName=id_phim&sortBy=desc">Quay lại</a>
                 </div>
             </div>
 

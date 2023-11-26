@@ -3,7 +3,7 @@
         
 
         <h1 style="margin-left:50px; ">Danh sách phòng:</h1>
-        <form action="/duan1_nhom13/Controller/Admin/index.php?" id="formSubmit" method="get">
+        <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?" id="formSubmit" method="get">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -42,8 +42,8 @@
                             }
                             ?>
                              </td>
-                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/duan1_nhom13/Controller/Admin/Phong/delete.php?id_phong=<?php echo $phong['id_phong'] ?>" class="btn btn-danger">Xóa</a> | 
-                            <a  href="/duan1_nhom13/Controller/Admin/index.php?action=chinhsuaphong&id_phong=<?php echo $phong['id_phong'] ?>" class="btn btn-warning">Sửa</a></td>
+                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Phong/delete.php?id_phong=<?php echo $phong['id_phong'] ?>" class="btn btn-danger">Xóa</a> | 
+                            <a  href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chinhsuaphong&id_phong=<?php echo $phong['id_phong'] ?>" class="btn btn-warning">Sửa</a></td>
 
                             
                         </tr>
@@ -56,7 +56,7 @@
             <div class="container-fluid">
                 <div class="row">
                    <div class="col">
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=phong" class="btn btn-primary">Quay lại</a>
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=phong" class="btn btn-primary">Quay lại</a>
                    </div>
                     <div class="col">
                         <ul class="pagination" id="pagination"></ul>

@@ -1,5 +1,5 @@
 <?php
-$path = $_SERVER['DOCUMENT_ROOT'] . "/duan1_nhom13/";
+$path = $_SERVER['DOCUMENT_ROOT'] . "/Nhom13_BookingVePhim_HPHCinemas/";
 
 include $path . "PHPMailer/PHPMailer/src/Exception.php";
 include $path . "PHPMailer/PHPMailer/src/PHPMailer.php";

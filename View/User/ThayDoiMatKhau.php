@@ -1,4 +1,4 @@
-<form id="myForm" action="/duan1_nhom13/Controller/Admin/Taikhoan/UpdatePassWord.php" method="post" style="margin: 150px 0;">
+<form id="myForm" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Taikhoan/UpdatePassWord.php" method="post" style="margin: 150px 0;">
     <div class="container ">
 
         <div class="form-row" style="margin: 50px 0;">

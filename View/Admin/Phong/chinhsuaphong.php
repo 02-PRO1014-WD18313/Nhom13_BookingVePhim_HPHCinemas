@@ -4,7 +4,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php?action=phong">Trang phòng</a>
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=phong">Trang phòng</a>
                 </li>
             </ul><!-- /.breadcrumb -->
         </div>
@@ -33,7 +33,7 @@
             <?php
             }
             ?>
-            <form action="/duan1_nhom13/Controller/Admin/Phong/update.php" method="post" enctype="multipart/form-data">
+            <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Phong/update.php" method="post" enctype="multipart/form-data">
 
 
                 <div class="row" style="">
@@ -100,7 +100,7 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                    <a class=" chuyentrang" href="/duan1_nhom13/Controller/Admin/index.php?action=danhsachphong&page=1&maxPageItem=5&sortName=id_phong&sortBy=desc">Quay lại</a>
+                    <a class=" chuyentrang" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=danhsachphong&page=1&maxPageItem=5&sortName=id_phong&sortBy=desc">Quay lại</a>
                 </div>
             </div>
 

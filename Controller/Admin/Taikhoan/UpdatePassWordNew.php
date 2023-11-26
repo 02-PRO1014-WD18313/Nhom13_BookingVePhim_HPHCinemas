@@ -1,7 +1,7 @@
 <?php
 // include "../../../model/DAO/pdo.php";
 session_start();
-$path = $_SERVER['DOCUMENT_ROOT'] . '/duan1_nhom13/';
+$path = $_SERVER['DOCUMENT_ROOT'] . '/Nhom13_BookingVePhim_HPHCinemas/';
 include $path . "Model/pdo.php";
 include $path . "Model/nguoidung.php";
 if (isset($_POST['btn'])) {

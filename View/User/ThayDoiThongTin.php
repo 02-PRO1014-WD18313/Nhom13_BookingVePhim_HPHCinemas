@@ -1,7 +1,7 @@
 <div id="check"></div>
 <div id="error"></div>
 <div>
-    <form name="signin" action="/duan1_nhom13/Controller/Admin/Taikhoan/UpdateInformation.php" method="post" onsubmit="return validateForm()">
+    <form name="signin" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Taikhoan/UpdateInformation.php" method="post" onsubmit="return validateForm()">
         <div class="container ">
 
             <div class="form-row" style="margin: 50px 0;">

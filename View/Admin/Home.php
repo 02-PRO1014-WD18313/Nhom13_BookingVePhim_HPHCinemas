@@ -4,7 +4,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="/duan1_nhom13/Controller/Admin/index.php">Trang chủ</a>
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php">Trang chủ</a>
                 </li>
             </ul><!-- /.breadcrumb -->
         </div>
