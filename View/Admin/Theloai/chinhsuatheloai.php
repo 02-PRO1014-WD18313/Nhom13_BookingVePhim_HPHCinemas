@@ -2,7 +2,7 @@
     <div class="main-content-inner">
         
         <h1 style="margin-left:50px; ">Chỉnh Sửa Thể Loại:</h1>
-        <form action="/duan1_nhom13/Controller/Admin/Theloai/update.php" method="post">
+        <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Theloai/update.php" method="post">
             <div class="row">
                 <div class="col-6" style="margin:50px;">
                     <div class="mb-3 mt-3" style="width: 50%; margin-bottom:20px;">
@@ -29,7 +29,7 @@
         </form>
         <div class="row">
             <div class="col">
-            <a class="danhsachdanhmuc" href="/duan1_nhom13/Controller/Admin/index.php?action=danhsachtheloai&page=1&maxPageItem=2&sortName=id_theloai&sortBy=asc">Xem danh sách thể loại</a>           
+            <a class="danhsachdanhmuc" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=danhsachtheloai&page=1&maxPageItem=2&sortName=id_theloai&sortBy=asc">Xem danh sách thể loại</a>           
             </div>
         
         </div>

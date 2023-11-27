@@ -2,30 +2,41 @@
     <div class="main-content-inner">
         
 
-        <h1 style="margin-left:50px; ">Danh sách thể loại:</h1>
+        <h1 style="margin-left:50px; ">Danh sách đơn hàng:</h1>
         <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?" id="formSubmit" method="get">
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         
                         <th>Id</th>
-                        <th>Tên thể loại</th>
+                        <th>Mã đơn hàng</th>
+                        <th>Họ và tên</th>
+                        <th>Tên phim</th>
+                        <th>Thời gian chiếu</th>
+                        <th>Phòng</th>
+                        <th>Mã ghế</th>
+                        <th>Tổng tiền</th>
                         <th>Thao tác</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     
-                    foreach ($listTheLoai as $theLoai) {
+                    foreach ($listDonHang as $donHang) {
                         
                     ?>
 
                         <tr>
                          
-                            <td><?php echo $theLoai['id_theloai'] ?></td>
-                            <td><?php echo $theLoai['tentheloai'] ?></td>
-                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Theloai/delete.php?id_theloai=<?php echo $theLoai['id_theloai'] ?>" class="btn btn-danger">Xóa</a> | 
-                            <a  href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=suatheloai&id_theloai=<?php echo $theLoai['id_theloai'] ?>" class="btn btn-warning">Sửa</a></td>
+                            <td><?php echo $donHang['id_donhang'] ?></td>
+                            <td><?php echo $donHang['madonhang'] ?></td>
+                            <td><?php echo $donHang['hovaten'] ?></td>
+                            <td><?php echo $donHang['tenphim'] ?></td>
+                            <td><?php echo $donHang['thoigianchieu'] ?></td>
+                            <td><?php echo $donHang['maphong'] ?></td>
+                            <td><?php echo $donHang['soghedadat'] ?></td>
+                            <td><?php echo $donHang['tongtien'] ?> VNĐ</td>
+                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Donhang/delete.php?id_donhang=<?php echo $donHang['id_donhang'] ?>" class="btn btn-danger">Xóa</a></td>
                         </tr>
                     <?php
                     }
@@ -35,16 +46,14 @@
             </table>
             <div class="container-fluid">
                 <div class="row">
-                   <div class="col">
-                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=theloai" class="btn btn-primary">Quay lại</a>
-                   </div>
+                   
                     <div class="col">
                         <ul class="pagination" id="pagination"></ul>
                         <input type="hidden" value="" id="page" name="page" />
                         <input type="hidden" value="" id="maxPageItem" name="maxPageItem" />
                         <input type="hidden" value="" id="sortName" name="sortName" />
                         <input type="hidden" value="" id="sortBy" name="sortBy" />
-                        <input type="hidden" value="danhsachtheloai" id="action" name="action" />
+                        <input type="hidden" value="quanlydonhang" id="action" name="action" />
                     </div>
 
                 </div>
@@ -69,8 +78,8 @@
                     if (currentPage != page) {
                         $('#maxPageItem').val(parseInt(limit));
                         $('#page').val(page);
-                        $('#sortName').val('id_theloai');
-					    $('#sortBy').val('asc');
+                        $('#sortName').val('id_donhang');
+					    $('#sortBy').val('desc');
                         $('#formSubmit').submit();
                     }
                 }

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function displaySeats(id_lichchieu) {
-    fetch('http://localhost/duan1_nhom13/Controller/Api/GheApi.php?id_lichchieu=' + id_lichchieu)
+    fetch('http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/Api/GheApi.php?id_lichchieu=' + id_lichchieu)
         .then(response => response.json())
         .then(seats => {
             seats.forEach(seat => {

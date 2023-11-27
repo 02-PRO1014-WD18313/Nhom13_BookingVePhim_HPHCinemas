@@ -69,7 +69,7 @@
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=suatchieu">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=danhsachsuatchieu&page=1&maxPageItem=5&sortName=id_phim&sortBy=desc">
                         
                         Suất chiếu
                     </a>
@@ -84,9 +84,16 @@
                 </li>
                 
                 <li>
-                    <a href="#">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=quanlydonhang&page=1&maxPageItem=5&sortName=id_donhang&sortBy=desc">
                         
                         Quản lý đơn hàng
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li>
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=thongkedoanhthu">
+                        
+                        Thống kê doanh thu
                     </a>
                     <b class="arrow"></b>
                 </li>

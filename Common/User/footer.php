@@ -32,7 +32,7 @@
           <?php
           foreach ($listDanhMuc as $danhmuc) {
           ?>
-            <p><a class="nav-link" href="/duan1_nhom13/Controller/User/index.php?action=danhmuc&id_danhmuc=<?php echo $danhmuc['id_danhmuc'] ?>"><?php echo $danhmuc['tendanhmuc'] ?></a></p>
+            <p><a class="nav-link" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=danhmuc&id_danhmuc=<?php echo $danhmuc['id_danhmuc'] ?>"><?php echo $danhmuc['tendanhmuc'] ?></a></p>
           <?php
           }
           ?>

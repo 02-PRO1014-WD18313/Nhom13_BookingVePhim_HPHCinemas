@@ -21,69 +21,51 @@
             <?php
             }
             ?>
-            <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/SuatChieu/add.php" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+            <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/SuatChieu/add.php" method="get" onsubmit="return validateForm()" enctype="multipart/form-data">
 
 
                 <div class="row" style="margin-bottom: 50px;">
                     <div class="col-sm-6" style="">
                         <div>
-                        <h3>Phim:</h3>
-                            <select name="phim" id="">
+                            <h1>Phim: <?php echo $_GET['tenphim'] ?></h1>
+                            
 
-                                <?php
-                                $check = false;
-                                for ($i=0; $i < sizeof($listPhim) ; $i ++){    
-                                    if($listPhim[$i]['id_lichchieu'] == null){
-                                        $check = true;
-                                ?>
-                                    <option value="<?php echo $listPhim[$i]['id_phim'] ?>"><?php echo $listPhim[$i]['tenphim'] ?></option>
-                                <?php
-                                    }
-                                }
-                                if($check){
-                                ?>
-                                <p>Hết phim</p>
-                                <?php
-                                }
-                                ?>
-
-                            </select>
                         </div>
 
                         <div>
-                        <h3>Phòng:</h3>
+                            <h1>Phòng:</h1>
                             <select name="phong" id="">
 
                                 <?php
-                                $check = false;
-                                for ($i=0; $i < sizeof($listPhong) ; $i ++){    
+
+                                for ($i = 0; $i < sizeof($listPhong); $i++) {
 
                                 ?>
                                     <option value="<?php echo $listPhong[$i]['id_phong'] ?>"><?php echo $listPhong[$i]['maphong'] ?></option>
                                 <?php
-                                    
+
                                 }
-                                if($check){
+
                                 ?>
-                                <p>Hết phòng</p>
-                                <?php
-                                }
-                                ?>
+
 
                             </select>
                         </div>
 
-                        
+
                     </div>
                     <div class="col-sm-6" style="">
-                        <label for=""><h3>Chọn giờ chiếu</h3></label>
-                        <input type="time" name="thoigianchieu">
+                        <label for="">
+                            <h1>Chọn giờ chiếu</h1>
+                        </label>
+                        <input type="time" name="thoigianchieu" required>
                     </div>
 
-                    
+
 
                     <div class="col-sm-12">
-                    
+                        <input type="hidden" name="id_phim" value="<?php echo $_GET['id_phim'] ?>">
+                        <input type="hidden" name="tenphim" value="<?php echo $_GET['tenphim'] ?>">
                         <button type="submit" class="form-control btn btn-primary" style="margin-top: 30px;">
                             Thêm
                         </button>
@@ -111,28 +93,28 @@
         var checkboxes = document.querySelectorAll('input[type="checkbox"]');
         var ngayPhatHanh = document.getElementById('ngayphathanh').value;
         var ngayKetThuc = document.getElementById('ngayketthuc').value;
-        
+
         var checked = false;
         var dateObj1 = new Date(ngayPhatHanh);
         var dateObj2 = new Date(ngayKetThuc);
         console.log(ngayPhatHanh);
         console.log(ngayKetThuc);
-        if(dateObj1 > dateObj2){
+        if (dateObj1 > dateObj2) {
             document.getElementById('error_date').innerText = 'Ngày phát hành lớn hơn ngày kết thúc.';
             console.log("hihi");
             return false;
-        }else{
+        } else {
             console.log("hoho");
         }
 
-        
+
         checkboxes.forEach(function(checkbox) {
             if (checkbox.checked) {
                 checked = true;
             }
         });
 
-        
+
 
         if (!checked) {
             document.getElementById('error-message').innerText = 'Vui lòng chọn ít nhất một ô thể loại.';

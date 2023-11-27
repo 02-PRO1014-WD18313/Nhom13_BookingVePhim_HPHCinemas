@@ -9,9 +9,8 @@
                     <tr>
                         
                         <th style="width: 5%;">Stt</th>
-                        <th style="width: 10%;">Mã phòng</th>
+                        <th style="width: 10%;">Tên phòng</th>
                         <th>Số lượng dãy</th>
-                        <th>Trạng thái</th>
                         <th>Thao tác</th>
                     </tr>
                 </thead>
@@ -26,22 +25,7 @@
                          
                             <td><?php echo $stt ?></td>
                             <td><?php echo $phong['maphong'] ?></td>
-        
                             <td><?php echo $phong['soluongday'] ?> </td>
-                            <td><?php
-                            if($phong['trangthai'] == 1){
-                              
-                              ?>
-                              <p class="btn btn-danger"><?php echo $phong['tentrangthaiphong'] ?></p>
-                              <?php  
-                            }else{
-
-                            ?>
-                            <p class="btn btn-success"><?php echo $phong['tentrangthaiphong'] ?></p>
-                            <?php
-                            }
-                            ?>
-                             </td>
                             <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Phong/delete.php?id_phong=<?php echo $phong['id_phong'] ?>" class="btn btn-danger">Xóa</a> | 
                             <a  href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chinhsuaphong&id_phong=<?php echo $phong['id_phong'] ?>" class="btn btn-warning">Sửa</a></td>
 

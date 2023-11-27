@@ -11,7 +11,10 @@
                         <th style="width: 5%;">Stt</th>
                         <th style="width: 10%;">Ảnh</th>
                         <th>Tên phim</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
                         <th>Suất chiếu</th>
+                        <th>Thao tác</th>
 
                     </tr>
                 </thead>
@@ -27,6 +30,8 @@
                             <td><?php echo $stt ?></td>
                             <td><img src="/Nhom13_BookingVePhim_HPHCinemas/Template/Admin/assets/img/<?php echo $phim['anh'] ?>" alt="" width="100%"></td>
                             <td><?php echo $phim['tenphim'] ?></td>
+                            <td><?php echo $phim['ngayphathanh'] ?></td>
+                            <td><?php echo $phim['ngayketthuc'] ?></td>
                             <td>
                             <?php
                             $lichChieu = FindLichChieuByPhim($phim['id_phim']);
@@ -42,6 +47,8 @@
                             <?php
                                 }
                             ?></td>
+
+                            <td><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=suatchieu&id_phim=<?php echo $phim['id_phim'] ?>&tenphim=<?php echo $phim['tenphim'] ?>" class="btn btn-success">Thêm suất chiếu</a></td>
                             
                             
                         </tr>
@@ -53,9 +60,7 @@
             </table>
             <div class="container-fluid">
                 <div class="row">
-                   <div class="col">
-                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=suatchieu" class="btn btn-primary">Quay lại</a>
-                   </div>
+                   
                     <div class="col">
                         <ul class="pagination" id="pagination"></ul>
                         <input type="hidden" value="" id="page" name="page" />

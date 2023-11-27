@@ -6,10 +6,11 @@ include $path . "Model/dayghe.php";
 include $path . "Model/ghe.php";
 include $path . "Model/lichchieu.php";
 include $path . "Model/sanpham.php";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $idphong = $_POST['phong'];
-    $idphim = $_POST['phim'];
-    $time = $_POST['thoigianchieu'];
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $idphong = $_GET['phong'];
+    $idphim = $_GET['id_phim'];
+    $time = $_GET['thoigianchieu'];
+    $tenphim = $_GET['tenphim'];
     $phim = FindPhim($idphim);
     $ngayphathanh = $phim[0]['ngayphathanh'];
     $ngayketthuc = $phim[0]['ngayketthuc'];
@@ -58,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    header("location:../../Admin/index.php?action=suatchieu&check=success");
+    header("location:../../Admin/index.php?action=suatchieu&check=success&id_phim={$idphim}&tenphim={$tenphim}");
 } else {
     header("location:../../Admin/index.php");
 }

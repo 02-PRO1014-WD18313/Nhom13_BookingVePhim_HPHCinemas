@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
     if ($informationUser != null) {
 
-        $link ="http://localhost/duan1_nhom13/Controller/User/index.php?action=NhapMatKhauMoi&id_nguoidung={$informationUser['id_nguoidung']}";
+        $link ="http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?action=NhapMatKhauMoi&id_nguoidung={$informationUser['id_nguoidung']}";
 
         $noidung = "<h3>Lấy lại mật khẩu:</h3> </br>";
         $noidung .= "<p>Xin chào: {$informationUser['hovaten']}</p> </br>";

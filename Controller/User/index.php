@@ -56,6 +56,14 @@ if (isset($_GET['action'])) {
                 include $path . "View/User/Dangnhap.php";
             }
             break;
+        case 'quanlydonhang':
+            if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "USER") {
+                include $path . "Controller/Admin/Donhang/ListByUser.php";
+                include $path . "View/User/DonHang.php";
+            } else {
+                include $path . "View/User/Dangnhap.php";
+            }
+            break;
         case 'dangky':
             include $path . "View/User/Dangky.php";
             break;

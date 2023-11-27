@@ -31,7 +31,7 @@ function FindPhimByLichChieu(){
 }
 
 function FindLichChieuByPhim($id){
-    $sql = "SELECT * FROM lichchieu WHERE id_phim = {$id}";
+    $sql = "SELECT * FROM lichchieu WHERE id_phim = {$id} ORDER BY thoigianchieu asc";
     return query($sql);
 }
 

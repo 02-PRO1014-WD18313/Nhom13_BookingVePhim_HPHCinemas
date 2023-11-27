@@ -42,51 +42,11 @@
                             <h3>Tên phòng:</h3>
                         </label>
                         <input type="text" class="form-control" id="maphong" placeholder="Mã phòng" value="<?php echo $phong[0]['maphong'] ?>" name="maphong" required>
-                        <div>
-                            <h3>Trạng thái phòng:</h3>
-                            <select name="trangthaiphong" id="">
-
-                                <?php
-                                foreach ($listTrangThai as $trangThai) {
-
-                                ?>
-                                    <option value="<?php echo $trangThai['id_trangthaiphong'] ?>"><?php echo $trangThai['tentrangthaiphong'] ?></option>
-                                <?php
-                                }
-                                ?>
-
-                            </select>
-                        </div>
+                       
                     </div>
                 </div>
                 <div class="row">
-                    <?php
-                    $char = 65;
-                    $length = 10;
-                    $seat = 10;
-                    for ($i = 0; $i < $length; $i++) {
-
-                    ?>
-
-                        <div class="col-sm-1" style="">
-                            <h3>Dãy <?php echo chr($char) ?></h3>
-                            <select name="<?php echo chr($char) ?>" id="">
-                                <?php
-                                for ($j = 1; $j <= $seat; $j++) {
-                                    
-                                ?>
-                                    
-                                    <option value="<?php echo $j ?>" <?php echo ($listDayGhe[$i]['soluongghe'] == $j) ? "selected" : "" ?>><?php echo $j ?> ghế</option>
-                                <?php
-                                }
-                                ?>
-                            </select>
-
-                        </div>
-                    <?php
-                        $char++;
-                    }
-                    ?>
+                   
                     <input type="hidden" name="id_phong" value="<?php echo $phong[0]['id_phong'] ?>">
                     <div class="col-sm-6" style="margin:30px 0">
 

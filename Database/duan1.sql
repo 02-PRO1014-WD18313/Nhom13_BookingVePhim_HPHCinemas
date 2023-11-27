@@ -88,9 +88,11 @@ ALTER TABLE ghe ADD FOREIGN KEY (id_dayghe) REFERENCES dayghe (id_dayghe);
 
 CREATE TABLE donhang(
 	id_donhang int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    soghedadat varchar(255),
+    soluong int,
     id_nguoidung int,
     id_lichchieu int,
-    soghedadat varchar(255)
+    
 );
 
 ALTER TABLE donhang ADD FOREIGN KEY (id_nguoidung) REFERENCES nguoidung (id_nguoidung);
@@ -139,3 +141,18 @@ ADD FOREIGN KEY (id_phim) REFERENCES phim(id_phim);
 alter table donhang add madonhang int;
 alter table donhang add thoigiandat timestamp;
 alter table donhang add gia double;
+
+create table doanhthu(
+	id_doanhthu int not null primary key auto_increment,
+    ngay timestamp,
+    tien double
+);
+
+create table chitietdoanhthu(
+	id_chitietdoanhthu int not null primary key auto_increment,
+    id_doanhthu int,
+    id_phim int
+);
+
+ALTER TABLE chitietdoanhthu ADD FOREIGN KEY (id_doanhthu) REFERENCES doanhthu(id_doanhthu);
+ALTER TABLE chitietdoanhthu ADD FOREIGN KEY (id_phim) REFERENCES phim(id_phim);
