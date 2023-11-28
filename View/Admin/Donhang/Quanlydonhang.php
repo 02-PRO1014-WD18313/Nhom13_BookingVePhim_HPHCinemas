@@ -16,7 +16,7 @@
                         <th>Phòng</th>
                         <th>Mã ghế</th>
                         <th>Tổng tiền</th>
-                        <th>Thao tác</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -36,7 +36,7 @@
                             <td><?php echo $donHang['maphong'] ?></td>
                             <td><?php echo $donHang['soghedadat'] ?></td>
                             <td><?php echo $donHang['tongtien'] ?> VNĐ</td>
-                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Donhang/delete.php?id_donhang=<?php echo $donHang['id_donhang'] ?>" class="btn btn-danger">Xóa</a></td>
+                           
                         </tr>
                     <?php
                     }

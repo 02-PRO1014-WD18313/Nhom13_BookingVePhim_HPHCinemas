@@ -50,6 +50,7 @@ if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "ADMI
 
                 break;
             case 'chitietphim':
+                include $path . "Controller/Admin/Binhluan/list.php";
                 include $path . "Controller/Admin/Sanpham/FindPhim.php";
                 include $path . "Controller/Admin/Theloai/FindTheLoaiBySanPham.php";
                 include $path . "View/Admin/Sanpham/chitietphim.php";
@@ -77,6 +78,7 @@ if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['mavaitro'] == "ADMI
                 include $path . "View/Admin/Phong/chinhsuaphong.php";
                 break;
             case 'suatchieu':
+                
                 include $path . "Controller/Admin/Suatchieu/FindPhongAndPhim.php";
                 include $path . "View/Admin/Suatchieu/themsuatchieu.php";
                 break;

@@ -91,7 +91,7 @@
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=thongkedoanhthu">
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=thongkedoanhthu&ngay=7&phim=">
                         
                         Thống kê doanh thu
                     </a>

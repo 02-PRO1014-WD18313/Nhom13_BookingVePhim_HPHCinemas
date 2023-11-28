@@ -28,7 +28,7 @@
                     <div class="col-sm-6" style="">
                         <div>
                             <h1>Phim: <?php echo $_GET['tenphim'] ?></h1>
-                            
+
 
                         </div>
 
@@ -55,10 +55,25 @@
 
                     </div>
                     <div class="col-sm-6" style="">
-                        <label for="">
-                            <h1>Chọn giờ chiếu</h1>
-                        </label>
-                        <input type="time" name="thoigianchieu" required>
+                        <div>
+                            <label for="">
+                                <h1>Chọn giờ chiếu</h1>
+                            </label>
+                            <input type="time" name="thoigianchieu" required>
+                        </div>
+                        <div>
+                            <h1>Suất chiếu của phim</h1>
+                            <?php
+                            $listLichChieu = FindLichChieuByPhim($_GET['id_phim']);
+                                foreach($listLichChieu as $lichChieu){
+                                    $thoigianchieu = new DateTime($lichChieu['thoigianchieu']);
+
+                            ?>
+                            <h3><?php echo $thoigianchieu->format("d-m-Y H:i") ?></h3>
+                            <?php
+                                }
+                            ?>
+                        </div>
                     </div>
 
 

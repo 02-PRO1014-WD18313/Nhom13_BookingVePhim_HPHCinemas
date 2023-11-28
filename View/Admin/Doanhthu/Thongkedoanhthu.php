@@ -6,22 +6,18 @@
             <div class="container">
                 <div class="row search ">
                     <div class="col-sm-6">
-                        <div class="mb-3 mt-3" style="width: 70%; margin-bottom:20px;">
-                            <label for="ngaybatdau" class="form-label">Nhập ngày bắt đầu</label>
-                            <input type="date" class="form-control" id="ngaybatdau" value="<?php echo (!empty($_GET['ngaybatdau']) ? $_GET['ngaybatdau'] : "") ?>" placeholder="Nhập ngày bắt đầu" name="ngaybatdau" required>
-                        </div>
+                    <label for="phim" class="form-label">Chọn thời gian thống kê: </label>
+                        <select name="ngay" id="">
+                            <option value="7" <?php echo (!empty($_GET['ngay']) &&$_GET['ngay'] == 7 ? "selected" : "") ?>>7 Ngày trước</option>
+                            <option value="15" <?php echo (!empty($_GET['ngay']) &&$_GET['ngay'] == 15 ? "selected" : "") ?>>15 Ngày trước</option>
+                            <option value="30" <?php echo (!empty($_GET['ngay']) &&$_GET['ngay'] == 30 ? "selected" : "") ?>>30 Ngày trước</option>
+                            <option value="60" <?php echo (!empty($_GET['ngay']) &&$_GET['ngay'] == 60 ? "selected" : "") ?>>60 Ngày trước</option>
+                            <option value="90" <?php echo (!empty($_GET['ngay']) &&$_GET['ngay'] == 90 ? "selected" : "") ?>>90 Ngày trước</option>
+                        </select>
+                    
                     </div>
                     <div class="col-sm-6">
-                        <div class="mb-3 mt-3" style="width: 70%; margin-bottom:20px;">
-                            <label for="ngayketthuc" class="form-label">Nhập ngày kết thúc</label>
-                            <input type="date" class="form-control" id="ngayketthuc" value="<?php echo (!empty($_GET['ngayketthuc']) ? $_GET['ngayketthuc'] : "") ?>" placeholder="Nhập ngày kết thúc" name="ngayketthuc" required>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row search">
-                    <div class="col-sm-6">
-                        <div class="mb-3 mt-3" style="width: 70%; margin-bottom:20px;">
+                   
                             <label for="phim" class="form-label">Chọn phim: </label>
 
                             <select name="phim" id="phim">
@@ -40,7 +36,12 @@
 
 
                             </select>
-                        </div>
+                    </div>
+
+                </div>
+                <div class="row search">
+                    <div class="col-sm-6">
+                       
                     </div>
                     <div class="col-sm-6">
                         <div class="mb-3 mt-3 button" style="width: 50%; margin-bottom:20px;">
@@ -56,7 +57,7 @@
         <div>
 
             <?php
-            if (!empty($_GET['ngaybatdau']) && !empty($_GET['ngayketthuc'])) {
+            if (!empty($_GET['ngay'])) {
             ?>
                 <table class="table table-bordered">
                     <thead>
@@ -70,16 +71,19 @@
                     </thead>
                     <tbody>
                         <?php
-                        $ngayBatDau = new DateTime($_GET['ngaybatdau']);
-                        $ngayKetThuc = new DateTime($_GET['ngayketthuc']);
+                        $ngayHienTai = new DateTime();
+                        $ngay = $ngayHienTai;
+                        $ngayKetThuc = $_GET['ngay'];
+                        
                         if ($_GET['phim'] == null) {
                             $tongtien = 0;
                             $stt = 0;
-                            while ($ngayBatDau <= $ngayKetThuc) {
-
-                                $ngay = $ngayBatDau->format("Y-m-d");
+                            for ($i = 1; $i <= $ngayKetThuc; $i++ ) {
+                                $ngayBatDau = $ngay->format('Y-m-d');
+                                // echo $ngayBatDau;
                                 // echo $ngay;
-                                $doanhthus =  FindDoanhThuByDate($ngay);
+                                $doanhthus =  FindDoanhThuByDate($ngayBatDau);
+                                // print_r($doanhthus);
                                 $tien = 0;
                                 if ($doanhthus != null) {
                                     $stt++;
@@ -89,15 +93,15 @@
                         ?>
                                     <tr>
                                         <td><?php echo $stt ?></td>
-                                        <td><?php echo $ngay ?></td>
+                                        <td><?php echo $ngayBatDau ?></td>
                                         <td><?php echo $tien ?> VNĐ</td>
-                                        <td><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chitietdoanhthu&ngaybatdau=<?php echo $_GET['ngaybatdau'] ?>&ngayketthuc=<?php echo $_GET['ngayketthuc'] ?>&phim=<?php echo $_GET['phim'] ?>&ngay=<?php echo $ngay ?>" class="btn btn-primary">Chi tiết</a></td>
+                                        <td><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chitietdoanhthu&ngayketthuc=<?php echo $_GET['ngay'] ?>&phim=<?php echo $_GET['phim'] ?>&ngay=<?php echo $ngayBatDau ?>" class="btn btn-primary">Chi tiết</a></td>
                                     </tr>
 
                             <?php
                                     $tongtien += $tien;
                                 }
-                                $ngayBatDau->modify('+1 day');
+                                $ngayHienTai->modify('-1 day');
                             }
                             ?>
                     </tbody>
@@ -108,11 +112,11 @@
                         } else {
                             $tongtien = 0;
                             $stt = 0;
-                            while ($ngayBatDau <= $ngayKetThuc) {
-
-                                $ngay = $ngayBatDau->format("Y-m-d");
+                            for ($i = 1; $i<=$ngayKetThuc; $i++ ) {
+                                $ngayBatDau = $ngay->format('Y-m-d');
+                                // $ngay = $ngayBatDau->format("Y-m-d");
                                 // echo $ngay;
-                                $doanhthus =  FindDoanhThuByDateAndPhim($ngay, $_GET['phim']);
+                                $doanhthus =  FindDoanhThuByDateAndPhim($ngayBatDau, $_GET['phim']);
                                 $tien = 0;
                                 if ($doanhthus != null) {
                                     $stt++;
@@ -123,14 +127,14 @@
 
                         <tr>
                             <td><?php echo $stt ?></td>
-                            <td><?php echo $ngay ?></td>
+                            <td><?php echo $ngayBatDau ?></td>
                             <td><?php echo $tien ?> VNĐ</td>
-                            <td><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chitietdoanhthu&ngaybatdau=<?php echo $_GET['ngaybatdau'] ?>&ngayketthuc=<?php echo $_GET['ngayketthuc'] ?>&phim=<?php echo $_GET['phim'] ?>&ngay=<?php echo $ngay ?>" class="btn btn-primary">Chi tiết</a></td>
+                            <td><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chitietdoanhthu&ngayketthuc=<?php echo $_GET['ngay'] ?>&phim=<?php echo $_GET['phim'] ?>&ngay=<?php echo $ngayBatDau ?>" class="btn btn-primary">Chi tiết</a></td>
                         </tr>
                 <?php
                                     $tongtien += $tien;
                                 }
-                                $ngayBatDau->modify('+1 day');
+                                $ngay->modify('-1 day');
                             }
                 ?>
                 </tbody>

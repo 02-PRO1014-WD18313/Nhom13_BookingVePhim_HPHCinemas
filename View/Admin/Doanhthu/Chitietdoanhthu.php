@@ -12,7 +12,7 @@
                         <th>Tên phim</th>
                         <th>Thời gian</th>
                         <th>Tiền</th>
-                        <th>Thao tác</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -30,7 +30,7 @@
                             <td><?php echo $doanhThu['tenphim'] ?></td>
                             <td><?php echo $doanhThu['ngay'] ?></td>
                             <td><?php echo $doanhThu['tien'] ?> VNĐ</td>
-                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Doanhthu/delete.php?id_doanhthu=<?php echo $doanhThu['id_doanhthu'] ?>&ngaybatdau=<?php echo $_GET['ngaybatdau'] ?>&ngayketthuc=<?php echo $_GET['ngayketthuc'] ?>&phim=<?php echo $_GET['phim'] ?>&ngay=<?php echo $ngay ?>" class="btn btn-danger">Xóa</a></td>
+                         
                         </tr>
                     <?php
                     }
@@ -42,7 +42,7 @@
             <div class="container-fluid">
                 <div class="row">
                    <div class="col">
-                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=thongkedoanhthu&ngaybatdau=<?php echo $_GET['ngaybatdau'] ?>&ngayketthuc=<?php echo $_GET['ngayketthuc'] ?>&phim=<?php echo $_GET['phim'] ?>&ngay=<?php echo $ngay ?>" class="btn btn-primary">Quay lại</a>
+                    <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=thongkedoanhthu&ngay=<?php echo $_GET['ngayketthuc'] ?>&phim=<?php echo $_GET['phim'] ?>" class="btn btn-primary">Quay lại</a>
                    </div>
                     <div class="col">
                         <ul class="pagination" id="pagination"></ul>
