@@ -5,7 +5,7 @@ include $path."Model/binhluan.php";
 
 $id = $_GET['id_binhluan'];
 $id_phim = $_GET['id_phim'];
-DeleteBinhLuanByUser($id);
+DeleteBinhLuan($id);
 header("location:../../User/index.php?action=chitietphim&id_phim={$id_phim}");
 
 ?>

@@ -56,6 +56,9 @@ function FindTimes($id,$time){
 
 }
 
-
+function FindLichChieuByPhong($id){
+    $sql = "SELECT * FROM lichchieu WHERE  id_phong ={$id}";
+    return query($sql);
+}
 
 ?>

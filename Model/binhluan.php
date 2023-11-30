@@ -9,8 +9,13 @@ function FindBinhLuanByPhim($id_phim){
     return query($sql);
 }
 
-function DeleteBinhLuanByUser($id_danhgia){
+function DeleteBinhLuan($id_danhgia){
     $sql = "DELETE FROM binhluan WHERE id_danhgia = {$id_danhgia}";
+    execute($sql);
+}
+
+function DeleteBinhLuanByUser($id){
+    $sql = "DELETE FROM binhluan WHERE id_nguoidung = {$id}";
     execute($sql);
 }
 

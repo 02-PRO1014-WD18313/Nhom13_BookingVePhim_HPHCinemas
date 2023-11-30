@@ -59,4 +59,9 @@ function SelectDonHang( $sortName = null, $sortBy = null, $offset = 0, $limit = 
     return $list;
 }
 
+function DeleteDonHangByNguoiDung($id){
+    $sql = "DELETE FROM donhang WHERE id_nguoidung = {$id}";
+    execute($sql);
+}
+
 ?>

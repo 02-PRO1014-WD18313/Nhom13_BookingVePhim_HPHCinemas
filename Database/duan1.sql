@@ -156,3 +156,12 @@ create table chitietdoanhthu(
 
 ALTER TABLE chitietdoanhthu ADD FOREIGN KEY (id_doanhthu) REFERENCES doanhthu(id_doanhthu);
 ALTER TABLE chitietdoanhthu ADD FOREIGN KEY (id_phim) REFERENCES phim(id_phim);
+
+Create table trangthaighecuanguoidung(
+	id_trangthaighecuanguoidung int not null primary key auto_increment,
+    id_ghe int,
+    id_nguoidung int
+);
+
+ALTER TABLE trangthaighecuanguoidung ADD FOREIGN KEY (id_ghe) REFERENCES ghe(id_ghe);
+ALTER TABLE trangthaighecuanguoidung ADD FOREIGN KEY (id_nguoidung) REFERENCES nguoidung(id_nguoidung);

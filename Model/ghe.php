@@ -10,7 +10,8 @@ function InsertGhe($maghe,$dayghe){
 // }
 
 function UpdateGhe($id,$status){
-    $sql = "UPDATE ghe SET trangthaighe = '{$status}' WHERE id_ghe = {$id}";
+    $sql = $sql = "UPDATE ghe SET trangthaighe = '{$status}' WHERE id_ghe = {$id}";
+
     execute($sql);
 }
 

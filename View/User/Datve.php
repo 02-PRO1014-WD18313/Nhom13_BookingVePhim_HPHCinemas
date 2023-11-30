@@ -260,3 +260,169 @@
         });
     });
 </script>
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var selectedSeats = [];
+        var idSeats = [];
+
+        const seatContainer = document.getElementById('seat-container');
+        var price = document.querySelector('.price');
+        var currentValue = parseInt(price.textContent);
+        var priceMovie = parseInt(<?php echo $information[0]['giave'] ?>);
+        price.innerText = 0;
+        // Lấy giá trị tham số action từ URL
+        const actionParam = getQueryParam('id_lichchieu');
+
+        // Kiểm tra xem actionParam có giá trị không và gọi hàm hiển thị ghế
+        if (actionParam) {
+            displaySeats(actionParam);
+        }
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function displaySeats(id_lichchieu) {
+            fetch('http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/Api/GheApi.php?id_lichchieu=' + id_lichchieu)
+                .then(response => response.json())
+                .then(seats => {
+                    seats.forEach(seat => {
+                        const seatElement = document.createElement('div');
+                        seatElement.classList.add('seat', seat.trangthaighe, 'col-2');
+
+                        seatElement.innerText = seat.maghe;
+                        // price.innerText = seat.gia;
+                        seatElement.addEventListener('click', () => toggleSeat(seatElement, seat.maghe, seat.trangthaighe, seat.id_ghe, seat.id_nguoidung,id_lichchieu));
+
+                        seatContainer.appendChild(seatElement);
+                    });
+                });
+
+
+        }
+        
+
+
+
+        function toggleSeat(seatElement, seatNumber, seatStatus, idSeat, idUser) {
+            if (seatStatus === 'booked') {
+                alert('Ghế này đã được đặt, vui lòng chọn ghế khác.');
+            } else {
+                if (idUser == null) {
+                    // if (selectedSeats.includes(seatNumber)) {
+                    // // Nếu ghế đã được chọn, hủy chọn ghế
+                    // const index = selectedSeats.indexOf(seatNumber);
+                    // const idIndex = idSeats.indexOf(idSeat);
+                    // idSeats.splice(idIndex, 1);
+                    // selectedSeats.splice(index, 1);
+                    // seatElement.classList.remove('reserved');
+                    // currentValue -= priceMovie;
+                    // price.textContent = currentValue;
+
+
+
+
+                    // } else {
+                    // Nếu ghế chưa được chọn, kiểm tra xem có tối đa 5 ghế đã được chọn chưa
+                    if (selectedSeats.length < 5) {
+                        // dang phat trien
+                        fetch('http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/Api/StatusSeatApi.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                idSeat: idSeat,
+                                status: seatStatus,
+                                price: <?php echo $information[0]['giave'] ?>,
+                                idUser: <?php echo $_SESSION['nguoidung']['id_nguoidung'] ?>
+                            })
+
+                        })
+
+
+                        selectedSeats.push(seatNumber);
+                        idSeats.push(idSeat);
+                        seatElement.classList.add('reserved');
+                        price.innerText +=2;
+                        currentValue += priceMovie
+                        price.textContent = currentValue;
+
+
+                        
+                        
+                       
+
+                    } else {
+                        alert('Bạn chỉ có thể chọn tối đa 5 ghế.');
+                    }
+                    // }
+
+                } else if (idUser != null && idUser == <?php echo $_SESSION['nguoidung']['id_nguoidung'] ?>) {
+                    fetch('http://localhost/Nhom13_BookingVePhim_HPHCinemas/Controller/Api/StatusSeatApi.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            idSeat: idSeat,
+                            status: seatStatus,
+                            price: <?php echo $information[0]['giave'] ?>,
+                            idUser: <?php echo $_SESSION['nguoidung']['id_nguoidung'] ?>
+                        })
+                    })
+
+                    const index = selectedSeats.indexOf(seatNumber);
+                    const idIndex = idSeats.indexOf(idSeat);
+                    idSeats.splice(idIndex, 1);
+                    selectedSeats.splice(index, 1);
+                    seatElement.classList.remove('reserved');
+                    currentValue -= priceMovie
+                    price.textContent = currentValue;
+
+                   
+
+                    //dang phat trien
+                    
+                    // displaySeats(actionParam);
+                    
+                } else if (idUser != null && idUser != <?php echo $_SESSION['nguoidung']['id_nguoidung'] ?>) {
+                    alert('Ghế đã được người khác đặt, vui lòng chọn ghế khác');
+                }
+            }
+
+        }
+
+        const paymentButton = document.getElementById('payment-button');
+
+        // function submitForm() {
+        //     // Lấy giá trị của biến id từ JavaScript
+        //     var idValue = 2;
+
+        //     // Cập nhật giá trị của trường ẩn
+        //     document.getElementById('id').value = idValue;
+
+        //     // Submit form
+        //     document.getElementById('myForm').submit();
+        // }
+
+        paymentButton.addEventListener('click', function() {
+            if (selectedSeats.length > 0) {
+                var idNguoiDung = <?php echo $_SESSION['nguoidung']['id_nguoidung'] ?>;
+                document.getElementById('id_nguodung').value = idNguoiDung;
+                document.getElementById('id_lichchieu').value = actionParam;
+                document.getElementById('idGhes').value = idSeats;
+                document.getElementById('maGhes').value = selectedSeats;
+                document.getElementById('gia').value = parseInt(price.innerText);
+                document.getElementById('myForm').submit();
+
+            } else {
+
+                alert('Vui lòng chọn ít nhất một ghế để thanh toán.');
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+        });
+    });
+</script> -->
