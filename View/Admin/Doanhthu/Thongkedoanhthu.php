@@ -94,7 +94,7 @@
                                     <tr>
                                         <td><?php echo $stt ?></td>
                                         <td><?php echo $ngayBatDau ?></td>
-                                        <td><?php echo $tien ?> VNĐ</td>
+                                        <td><?php echo number_format($tien, 0, '', '.') ?> VNĐ</td>
                                         <td><a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=chitietdoanhthu&ngayketthuc=<?php echo $_GET['ngay'] ?>&phim=<?php echo $_GET['phim'] ?>&ngay=<?php echo $ngayBatDau ?>" class="btn btn-primary">Chi tiết</a></td>
                                     </tr>
 
@@ -106,7 +106,7 @@
                             ?>
                     </tbody>
                 </table>
-                <h2>Tổng tiền: <span style="color: red;"><?php echo $tongtien ?> VNĐ </span> </h2>
+                <h2>Tổng tiền: <span style="color: red;"><?php echo number_format($tongtien, 0, '', '.') ?> VNĐ </span> </h2>
 
                 <?php
                         } else {

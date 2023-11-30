@@ -10,7 +10,7 @@
       ?>
         <div class="accordion-item">
           <div class="row d-flex">
-            <div class="col-11 d-flex align-items-center">
+            <div class="col-12 d-flex align-items-center">
               <h2 class="accordion-header" id="heading<?php echo $stt ?>">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $stt ?>" aria-expanded="false" aria-controls="collapse<?php echo $stt ?>">
                   <div class=" rounded-3 ">
@@ -27,7 +27,7 @@
                           <h5> Thời gian: <?php echo $donhang['thoigiandat'] ?></h5>
                         </div>
                         <div class="col-3 " style="text-align: center;">
-                          <h5 style="color: green;"> Tổng tiền: <?php echo $donhang['tongtien'] ?></h5>
+                          <h5 style="color: green;"> Tổng tiền: <?php echo number_format($donhang['tongtien'], 0, '', '.')  ?> VNĐ </h5>
 
                         </div>
                       </div>
@@ -122,7 +122,7 @@
                                 <p class="mb-0">Giá vé:</p>
                               </div>
                               <div class="col-md-4">
-                                <p class="mb-0"><?php echo $donhang['giave'] ?> VNĐ</p>
+                                <p class="mb-0"><?php echo number_format($donhang['giave'], 0, '', '.')  ?> VNĐ</p>
                               </div>
                             </div>
                           </div>

@@ -35,7 +35,7 @@
                             <td><?php echo $donHang['thoigianchieu'] ?></td>
                             <td><?php echo $donHang['maphong'] ?></td>
                             <td><?php echo $donHang['soghedadat'] ?></td>
-                            <td><?php echo $donHang['tongtien'] ?> VNĐ</td>
+                            <td><?php echo number_format($donHang['tongtien'], 0, '', '.')  ?> VNĐ</td>
                            
                         </tr>
                     <?php

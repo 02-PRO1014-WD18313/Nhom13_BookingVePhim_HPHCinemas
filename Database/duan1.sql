@@ -54,13 +54,11 @@ ALTER TABLE theloaiphimchitiet ADD FOREIGN KEY (id_phim) REFERENCES phim(id_phim
 CREATE TABLE phong(
 	id_phong int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     maphong varchar(255),
-    soluongday int,
-    soluongghe int,
     trangthai int
 );
 
 CREATE TABLE lichchieu(
-	id_lichchieu int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	id_lichchieu int AUTO_INCREMENT NOT NULL PRIMARY KEY
     id_phim int,
     id_phong int,
     thoigianchieu timestamp
@@ -140,7 +138,7 @@ ADD FOREIGN KEY (id_phim) REFERENCES phim(id_phim);
 
 alter table donhang add madonhang int;
 alter table donhang add thoigiandat timestamp;
-alter table donhang add gia double;
+alter table donhang add tongtien double;
 
 create table doanhthu(
 	id_doanhthu int not null primary key auto_increment,
@@ -157,11 +155,3 @@ create table chitietdoanhthu(
 ALTER TABLE chitietdoanhthu ADD FOREIGN KEY (id_doanhthu) REFERENCES doanhthu(id_doanhthu);
 ALTER TABLE chitietdoanhthu ADD FOREIGN KEY (id_phim) REFERENCES phim(id_phim);
 
-Create table trangthaighecuanguoidung(
-	id_trangthaighecuanguoidung int not null primary key auto_increment,
-    id_ghe int,
-    id_nguoidung int
-);
-
-ALTER TABLE trangthaighecuanguoidung ADD FOREIGN KEY (id_ghe) REFERENCES ghe(id_ghe);
-ALTER TABLE trangthaighecuanguoidung ADD FOREIGN KEY (id_nguoidung) REFERENCES nguoidung(id_nguoidung);

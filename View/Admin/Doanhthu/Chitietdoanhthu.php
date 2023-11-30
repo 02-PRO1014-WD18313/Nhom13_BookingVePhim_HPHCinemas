@@ -29,7 +29,7 @@
                             <td><?php echo $stt ?></td>
                             <td><?php echo $doanhThu['tenphim'] ?></td>
                             <td><?php echo $doanhThu['ngay'] ?></td>
-                            <td><?php echo $doanhThu['tien'] ?> VNĐ</td>
+                            <td><?php echo  number_format($doanhThu['tien'], 0, '', '.') ?>  VNĐ</td>
                          
                         </tr>
                     <?php
@@ -38,7 +38,7 @@
                 </tbody>
 
             </table>
-            <h2>Tổng tiền: <span style="color: red;"><?php echo $tongtien ?> VNĐ</span></h2>
+            <h2>Tổng tiền: <span style="color: red;"><?php echo number_format($tongtien, 0, '', '.')  ?> VNĐ</span></h2>
             <div class="container-fluid">
                 <div class="row">
                    <div class="col">
