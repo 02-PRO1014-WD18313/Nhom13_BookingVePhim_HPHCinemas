@@ -72,7 +72,7 @@
             </form>
 
         </div>
-        <form action="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?" method="get">
+        <form id="formSubmit" action="/Nhom13_BookingVePhim_HPHCinemas/Controller/User/index.php?" method="get">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3  justify-content-center">
 
 
@@ -161,7 +161,7 @@
 <script>
     var totalPage = <?php echo $totalPage ?>;
     var currentPage = <?php echo $page ?>;
-    var limit = 5;
+    var limit = 6;
     $(function() {
         window.pagObj = $('#pagination').twbsPagination({
             totalPages: totalPage, // so luong page

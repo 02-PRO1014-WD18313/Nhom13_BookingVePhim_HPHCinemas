@@ -43,7 +43,7 @@
                 <li>
                     <a href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/index.php?action=danhmuc">
                         
-                        Danh mục sản phẩm
+                        Danh mục phim
                     </a>
                     <b class="arrow"></b>
                 </li>

@@ -20,25 +20,25 @@
                         ?>
                         <div class="form-group col-md-6" style="margin-bottom: 20px;">
                             <label for="hovaten">Họ và tên</label>
-                            <input type="text" class="form-control" id="hovaten" name="hovaten">
+                            <input type="text" class="form-control" id="hovaten" name="hovaten" required>
                         </div>
                         <div class="form-group col-md-6" style="margin-bottom: 20px;">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email">
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
 
 
                         <div class="form-group col-md-6" style="margin-bottom: 20px;">
                             <label for="tendangnhap">Tên đăng nhập</label>
-                            <input type="text" class="form-control" id="tendangnhap" name="tendangnhap">
+                            <input type="text" class="form-control" id="tendangnhap" name="tendangnhap" required>
                         </div>
                         <div class="form-group col-md-6" style="margin-bottom: 20px;">
                             <label for="matkhau">Mật khẩu</label>
-                            <input type="password" class="form-control" id="matkhau" name="matkhau">
+                            <input type="password" class="form-control" id="matkhau" name="matkhau" required>
                         </div>
                         <div class="form-group col-md-6" style="margin-bottom: 20px;">
                             <label for="xacnhanmatkhau">Nhập lại mật khẩu</label>
-                            <input type="password" class="form-control" id="xacnhanmatkhau" name="xacnhanmatkhau">
+                            <input type="password" class="form-control" id="xacnhanmatkhau" name="xacnhanmatkhau" required>
                             <span id="check_pass" style="color: red;"></span>
                         </div>
 
@@ -73,7 +73,6 @@
             return;
         }
 
-        console.log("----------------------------------------");
         if (matKhau.value.trim() != nhapLaiMatKhau.value.trim()) {
             checkpass.innerHTML = "Bạn nhập sai mật khẩu xác nhận!";
             event.preventDefault(); // Prevent form submission

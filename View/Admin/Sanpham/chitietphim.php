@@ -59,7 +59,7 @@
                             <td><?php echo $binhLuan['hovaten'] ?></td>
                             <td><?php echo $binhLuan['noidung'] ?></td>
                             <td><?php echo $binhLuan['ngayviet'] ?></td>
-                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Sanpham/delete.php?id_phim=<?php echo $phim['id_phim'] ?>" class="btn btn-danger">Xóa</a></td>
+                            <td><a onclick=" return confirm('Bạn có chắc chắn muốn xóa không')" href="/Nhom13_BookingVePhim_HPHCinemas/Controller/Admin/Binhluan/delete.php?id_binhluan=<?php echo $binhLuan['id_danhgia'] ?>&id_phim=<?php echo $_GET['id_phim'] ?>" class="btn btn-danger">Xóa</a></td>
 
                         </tr>
                     <?php

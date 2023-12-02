@@ -97,7 +97,7 @@
                 <input type="hidden" id="idGhes" name="idGhes">
                 <input type="hidden" id="maGhes" name="maGhes">
                 <input type="hidden" id="gia" name="gia">
-                <button id="payment-button" name="redirect">Thanh toán</button>
+                <button id="payment-button" name="payUrl">Thanh toán</button>
             </form>
 
         </div>
